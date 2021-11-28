@@ -1,0 +1,414 @@
+@import 'define';
+
+.profile {
+    h2.profile-section {
+        margin-top: 60px;
+        margin-bottom: 40px;
+        color: var(--color-theme);
+        font-family: "Poppins";
+        font-size: 24px;
+        font-weight: 600;
+        text-align: center;
+    }
+
+    .skill-list {
+        width: 720px;
+        margin: 0 auto;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+
+        @include mobile {
+            width: auto;
+            margin: 0 15px;
+            justify-content: left;
+        }
+
+        .skill-item {
+            height: 32px;
+            margin: 0 10px 15px;
+            background-color: var(--color-skill-item-bg);
+            border-radius: 16px;
+            display: flex;
+
+            @include mobile {
+                margin: 0 10px 15px 0;
+            }
+
+            .thum {
+                width: 24px;
+                height: 24px;
+                margin-top: 3px;
+                margin-left: 3px;
+                margin-right: 5px;
+                background-color: var(--color-thum-bg);
+                border: 1px solid var(--color-border-white);
+                border-radius: 12px;
+                display: block;
+
+                img {
+                    border-radius: 12px;
+                }
+            }
+
+            .name {
+                padding-right: 14px;
+                font-size: 14px;
+                line-height: 32px;
+            }
+        }
+    }
+
+    .certification-list {
+        width: 840px;
+        margin: 0 auto;
+        display: flex;
+        justify-content: space-between;
+
+        @include mobile {
+            width: auto;
+            margin: 0 10px;
+            display: block;
+        }
+
+        .certification-item {
+            width: 360px;
+            padding: 20px;
+            position: relative;
+            border: 1px solid var(--color-certification-item-border);
+            border-radius: 5px;
+
+            @include mobile {
+                width: auto;
+                margin-bottom: 20px;
+
+                &:last-child {
+                    margin-bottom: 0;
+                }
+            }
+
+            &:before {
+                width: 36px;
+                height: 36px;
+                content: '';
+                position: absolute;
+                display: block;
+            }
+
+            &.ap:before {
+                background-image: url(../assets/certification-ap.svg);
+            }
+
+            &.nw:before {
+                background-image: url(../assets/certification-nw.svg);
+            }
+
+            .name {
+                padding-top: 5px;
+                font-size: 20px;
+                padding-left: 50px;
+                font-weight: bold;
+                line-height: 1;
+
+                @include mobile {
+                    line-height: 1.2;
+                }
+            }
+
+            .when {
+                margin-top: 10px;
+                padding-left: 50px;
+                color: var(--color-text-sub);
+                font-size: 14px;
+                line-height: 1;
+            }
+
+            .description {
+                margin-top: 15px;
+                padding-left: 50px;
+                color: var(--color-text-sub);
+                font-size: 14px;
+                line-height: 24px;
+                text-align: justify;
+            }
+
+            .links {
+                margin-top: 15px;
+                padding-left: 50px;
+
+                a {
+                    margin-top: 5px;
+                    color: var(--color-theme);
+                    font-size: 14px;
+                    text-decoration: none;
+                    display: inline-block; 
+    
+                    &:first-child {
+                        margin-top: 0;
+                    }
+
+                    &:before {
+                        width: 14px;
+                        height: 14px;
+                        margin-right: 5px;
+                        content: "";
+                        display: inline-block;
+                        background-image: url(../assets/icon-link.svg);
+                    }
+    
+                    &:hover {
+                        text-decoration: underline;
+                    }
+                }
+            }
+        }
+    }
+
+    .award-list {
+        width: 640px;
+        margin: 0 auto;
+
+        @include mobile {
+            width: auto;
+            margin: 0 10px;
+        }
+
+        .award-item {
+            margin-bottom: 50px;
+            padding: 20px;
+            position: relative;
+            border: 1px solid var(--color-yellow-800);
+            background-color: var(--color-yellow-100);
+            border-radius: 5px;
+
+
+            &:last-child {
+                margin-bottom: 0;
+            }
+
+            &:before {
+                width: 36px;
+                height: 48px;
+                content: '';
+                background-image: url(../assets/icon-medal.svg);
+                position: absolute;
+                display: block;
+            }
+
+            .name {
+                padding-top: 5px;
+                font-size: 20px;
+                padding-left: 50px;
+                font-weight: bold;
+                line-height: 1;
+
+                @include mobile {
+                    line-height: 1.2;
+                }
+            }
+
+            .when {
+                margin-top: 10px;
+                padding-left: 50px;
+                color: var(--color-text-sub);
+                font-size: 14px;
+                line-height: 1;
+            }
+
+            .description {
+                margin-top: 15px;
+                padding-left: 50px;
+                color: var(--color-text-sub);
+                font-size: 14px;
+                line-height: 24px;
+                text-align: justify;
+            }
+
+            .links {
+                margin-top: 15px;
+                padding-left: 50px;
+
+                a {
+                    margin-top: 5px;
+                    color: var(--color-theme);
+                    font-size: 14px;
+                    text-decoration: none;
+                    display: inline-block; 
+    
+                    &:first-child {
+                        margin-top: 0;
+                    }
+
+                    &:before {
+                        width: 14px;
+                        height: 14px;
+                        margin-right: 5px;
+                        content: "";
+                        display: inline-block;
+                        background-image: url(../assets/icon-link.svg);
+                    }
+    
+                    &:hover {
+                        text-decoration: underline;
+                    }
+                }
+            }
+        }
+    }
+
+    .career-container {
+        width: 640px;
+        margin: 0 auto;
+
+        @include mobile {
+            width: auto;
+            margin: 0 15px;
+        }
+
+        .career-item {
+            margin-bottom: 30px;
+            line-height: 1;
+            display: flex;
+            position: relative;
+
+            &:last-child {
+                margin-bottom: 0;
+            }
+
+            &:before {
+                width: 16px;
+                height: 16px;
+                content: '';
+                background-color: var(--color-base);
+                border: 1px solid var(--color-theme);
+                border-radius: 8px;
+                position: absolute;
+                display: block;
+            }
+
+            &.now:before {
+                background-color: var(--color-theme);
+            }
+
+            &:after {
+                width: 2px;
+                content: '';
+                background-color: var(--color-theme);
+                position: absolute;
+                top: 18px;
+                bottom: -30px;
+                left: 8px;
+            }
+
+            &:last-child:after {
+                width: 0;
+            }
+
+            .period {
+                width: 90px;
+                margin-left: 30px;
+                color: var(--color-theme);
+                font-family: "Oswald";
+                font-size: 16px;
+                font-weight: 400;
+                line-height: 20px;
+                
+                @include mobile {
+                    margin-left: 25px;
+                }
+            }
+
+            .info {
+                cursor: pointer;
+
+                &:before {
+                    width: 32px;
+                    height: 32px;
+                    content: '';
+                    background-repeat: no-repeat;
+                    position: absolute;
+                    display: block;
+
+                    @include mobile {
+                        display: none;
+                    }
+                }
+
+                &.school:before {
+                    background-image: url(../assets/icon-graduation-cap.svg);
+                }
+
+                &.work:before {
+                    background-image: url(../assets/icon-briefcase.svg);
+                }
+
+                &:after {
+                    width: 7px;
+                    height: 7px;
+                    content: '';
+                    border-width: 2px 2px 0 0;
+                    border-style: solid;
+                    border-color: var(--color-theme);
+                    display: inline-block;
+                    position: absolute;
+                    top: 10px;
+                    right: 0;
+                    transition-property: transform;
+                    transition-duration: 200ms;
+                    transform: rotate(135deg);
+                }
+
+                &.open:after {
+                    transform: rotate(-45deg);
+                }
+
+                .name {
+                    padding-left: 40px;
+                    font-size: 20px;
+                    font-weight: bold;
+
+                    @include mobile {
+                        padding-left: 0;
+                        font-size: 18px;
+                    }
+                }
+
+                .subname {
+                    padding-left: 40px;
+                    margin-top: 10px;
+                    font-size: 14px;
+
+                    @include mobile {
+                        padding-left: 0;
+
+                        .detail {
+                            display: none;
+                        }
+                    }
+                }
+            }
+
+            .description {
+                max-height: 0;
+                padding-top: 0;
+                color: var(--color-text-sub);
+                font-size: 14px;
+                line-height: 24px;
+                text-align: justify;
+                overflow: hidden;
+                transition-property: max-height, padding-top;
+                transition-duration: 200ms;
+                transition-timing-function: linear;
+
+                &.open {
+                    max-height: 150px;
+                    padding-top: 15px;
+
+                    @include mobile {
+                        max-height: 300px;
+                    }
+                }
+            }
+        }
+    }
+}

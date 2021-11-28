@@ -1,0 +1,82 @@
+:root {
+    // Color Palette (Color Base)
+    --color-black: #000;
+    --color-white-rgb: 0, 0, 0;
+    --color-white: #fff;
+    --color-white-rgb: 255, 255, 255;
+
+    $color-gray: #26282a;
+    --color-gray-050: #{scale-color($color-gray, $lightness: 97%)};
+    --color-gray-100: #{scale-color($color-gray, $lightness: 95%)};
+    --color-gray-200: #{scale-color($color-gray, $lightness: 90%)};
+    --color-gray-300: #{scale-color($color-gray, $lightness: 80%)};
+    --color-gray-400: #{scale-color($color-gray, $lightness: 70%)};
+    --color-gray-500: #{scale-color($color-gray, $lightness: 60%)};
+    --color-gray-600: #{scale-color($color-gray, $lightness: 50%)};
+    --color-gray-700: #{scale-color($color-gray, $lightness: 35%)};
+    --color-gray-800: #{scale-color($color-gray, $lightness: 20%)};
+    --color-gray-900: #{scale-color($color-gray, $lightness: 0%)};
+
+    $color-yellow: #ffe600;
+    --color-yellow-100: #{scale-color($color-yellow, $lightness: 95%)};
+    --color-yellow-200: #{scale-color($color-yellow, $lightness: 90%)};
+    --color-yellow-300: #{scale-color($color-yellow, $lightness: 80%)};
+    --color-yellow-400: #{scale-color($color-yellow, $lightness: 70%)};
+    --color-yellow-500: #{scale-color($color-yellow, $lightness: 60%)};
+    --color-yellow-600: #{scale-color($color-yellow, $lightness: 50%)};
+    --color-yellow-700: #{scale-color($color-yellow, $lightness: 35%)};
+    --color-yellow-800: #{scale-color($color-yellow, $lightness: 20%)};
+    --color-yellow-900: #{scale-color($color-yellow, $lightness: 0%)};
+
+    $color-blue: #0055ff;
+    --color-blue-100: #{scale-color($color-blue, $lightness: 95%)};
+    --color-blue-200: #{scale-color($color-blue, $lightness: 90%)};
+    --color-blue-300: #{scale-color($color-blue, $lightness: 80%)};
+    --color-blue-400: #{scale-color($color-blue, $lightness: 70%)};
+    --color-blue-500: #{scale-color($color-blue, $lightness: 60%)};
+    --color-blue-600: #{scale-color($color-blue, $lightness: 50%)};
+    --color-blue-700: #{scale-color($color-blue, $lightness: 35%)};
+    --color-blue-800: #{scale-color($color-blue, $lightness: 20%)};
+    --color-blue-900: #{scale-color($color-blue, $lightness: 0%)};
+
+    // Color Palette (Parts Base)
+    --color-base: var(--color-white);
+    --color-base-transparent: rgba(var(--color-white-rgb), 0);
+    --color-theme: var(--color-blue-700);
+
+    --color-text-base: var(--color-gray-900);
+    --color-text-sub: var(--color-gray-700);
+    --color-text-link: var(--color-blue-600);
+    --color-text-workdetail-description: var(--color-gray-800);
+
+    --color-border-gray-300: var(--color-gray-200);
+    --color-border-gray-600: var(--color-gray-300);
+    --color-border-gray-900: var(--color-gray-500);
+    --color-border-white: var(--color-white);
+
+    --color-btn-text: var(--color-blue-700);
+    --color-btn-icon: var(--color-blue-700);
+    --color-btn-bg: var(--color-blue-100);
+    --color-btn-bg-hover: transparent;
+
+    --color-header-btn-bg: transparent;
+    --color-header-btn-bg-hover: var(--color-gray-100);
+
+    --color-hero-bg: var(--color-gray-050);
+    --color-thum-bg: var(--color-white);
+    --color-thum-border: var(--color-white);
+    --color-skill-item-bg: var(--color-gray-050);
+    --color-tech-item-border: var(--color-border-gray-300);
+    --color-certification-item-border: var(--color-border-gray-600);
+
+    --color-grad-trans-to-base: linear-gradient(var(--color-base-transparent), var(--color-base));
+
+    // Width
+    --min-width-pc: 1120px;
+}
+
+@mixin mobile {
+    @media screen and (max-width: 767px) {
+        @content;
+    }
+}
