@@ -18,6 +18,8 @@ import tech_wordpress from "../assets/tech/wordpress.svg";
 
 // サイトタイトル
 export const site_title = "OGURA KATSUYA";
+// サイトURL
+export const site_baseurl = "https://ogura.biz";
 
 // SNSのURL
 export const sns_url = {

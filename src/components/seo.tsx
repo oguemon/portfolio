@@ -1,13 +1,13 @@
 import React from "react";
 import { useLocation } from "@reach/router"
 import { Helmet } from "react-helmet";
-import { site_title } from "../components/constant";
+import { site_title, site_baseurl } from "../components/constant";
 import default_ogpimg from "../assets/ogp.png";
 
 export default function SEO({ title, description, ogpimg = "" }) {
 
   const location = useLocation();
-  const defailt_ogpimg_url = location.origin + default_ogpimg;
+  const defailt_ogpimg_url = site_baseurl + default_ogpimg;
 
   return <>
     <Helmet
