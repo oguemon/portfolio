@@ -27,7 +27,7 @@ export default function WorkDetail({ pageContext }) {
   };
 
   return <>
-    <SEO title={ title } description={ abstract } />
+    <SEO title={ title } description={ abstract } ogpimg={ topimg } />
     <Header />
     <main>
       <div className="work-info">
