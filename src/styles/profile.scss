@@ -60,7 +60,7 @@
     }
 
     .certification-list {
-        width: 840px;
+        width: 1080px;
         margin: 0 auto;
         display: flex;
         justify-content: space-between;
@@ -72,7 +72,7 @@
         }
 
         .certification-item {
-            width: 360px;
+            width: 310px;
             padding: 20px;
             position: relative;
             border: 1px solid var(--color-certification-item-border);
@@ -101,6 +101,10 @@
 
             &.nw:before {
                 background-image: url(../assets/certification-nw.svg);
+            }
+
+            &.db:before {
+                background-image: url(../assets/certification-db.svg);
             }
 
             .name {
@@ -141,8 +145,8 @@
                     color: var(--color-theme);
                     font-size: 14px;
                     text-decoration: none;
-                    display: inline-block; 
-    
+                    display: inline-block;
+
                     &:first-child {
                         margin-top: 0;
                     }
@@ -155,7 +159,7 @@
                         display: inline-block;
                         background-image: url(../assets/icon-link.svg);
                     }
-    
+
                     &:hover {
                         text-decoration: underline;
                     }
@@ -233,8 +237,8 @@
                     color: var(--color-theme);
                     font-size: 14px;
                     text-decoration: none;
-                    display: inline-block; 
-    
+                    display: inline-block;
+
                     &:first-child {
                         margin-top: 0;
                     }
@@ -247,7 +251,7 @@
                         display: inline-block;
                         background-image: url(../assets/icon-link.svg);
                     }
-    
+
                     &:hover {
                         text-decoration: underline;
                     }
@@ -312,7 +316,7 @@
                 font-size: 16px;
                 font-weight: 400;
                 line-height: 20px;
-                
+
                 @include mobile {
                     margin-left: 25px;
                 }
