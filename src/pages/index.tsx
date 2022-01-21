@@ -60,7 +60,9 @@ export default function Top({ data }) {
 
 export const query = graphql`
   query MyQuery {
-    allContentfulPortfolio {
+    allContentfulPortfolio (
+      sort: { fields: year, order: DESC }
+    ) {
       edges {
         node {
           abstract
