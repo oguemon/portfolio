@@ -18,6 +18,7 @@
     margin: 0;
     display: flex;
     flex-wrap: wrap;
+    gap: 20px 42px;
 
     @include mobile {
         flex-direction: column;
@@ -25,8 +26,6 @@
 
     a.work-box {
         width: 345px;
-        margin-bottom: 20px;
-        margin-right: 42px;
         text-decoration: none;
         transition-property: opacity;
         transition-duration: 200ms;
@@ -35,17 +34,9 @@
             opacity: 0.4;
         }
 
-        &:nth-child(3n+3){
-            margin-right: 0;
-        }
-
         @include mobile {
             width: auto;
-            margin: 0 15px 20px;
-
-            &:nth-child(3n+3){
-                margin-right: 15px;
-            }
+            margin: 0 15px;
         }
 
         img.thum {
