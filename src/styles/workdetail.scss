@@ -12,7 +12,7 @@
         margin-bottom: 50px;
         border-radius: 5px;
         display: block;
-        
+
         @include mobile {
             width: 100%;
             margin-top: 0;
@@ -63,7 +63,7 @@
         line-height: 1;
         text-decoration: none;
         display: block;
-        
+
         @include mobile {
             font-size: 12px;
         }
@@ -82,7 +82,7 @@
         margin-top: 25px;
         display: flex;
         flex-wrap: wrap;
-    
+
         @include mobile {
             margin-top: 15px;
         }
@@ -93,7 +93,7 @@
             border: 1px solid var(--color-tech-item-border);
             border-radius: 16px;
             display: flex;
-    
+
             @include mobile {
                 height: 24px;
                 margin: 0 5px 10px 0;
@@ -109,7 +109,7 @@
                 border: 1px solid var(--color-thum-border);
                 border-radius: 12px;
                 display: block;
-    
+
                 @include mobile {
                     width: 20px;
                     height: 20px;
@@ -175,6 +175,16 @@
                 display: none;
             }
         }
+
+        a {
+            color: inherit;
+            text-decoration: underline;
+
+            &:hover {
+                text-decoration: none;
+            }
+        }
+
     }
 
     .read-more {
