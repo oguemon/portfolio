@@ -19,20 +19,16 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
                     description {
                         description
                     }
-                    thumnail {
-                        file {
-                            url
-                        }
-                    }
                     topimg {
                         file {
                             url
                         }
+                        title
+                        gatsbyImageData
                     }
                     subimgs {
-                        file {
-                            url
-                        }
+                        title
+                        gatsbyImageData(layout: FULL_WIDTH)
                     }
                 }
             }

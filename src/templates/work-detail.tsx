@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { GatsbyImage } from 'gatsby-plugin-image'
 import { techIcon } from "../components/constant";
 import Header from "../components/header";
 import Footer from "../components/footer";
@@ -9,7 +10,7 @@ export default function WorkDetail({ pageContext }) {
 
   const { abstract, category, client, role, tech, title, url, year } = pageContext.post;
   const description = pageContext.post.description.description;
-  const topimg = pageContext.post.topimg.file.url;
+  const topimg = pageContext.post.topimg;
 
   const tech_names = tech.split(",");
   const tech_list = tech_names.map(tech_name => {
@@ -27,12 +28,16 @@ export default function WorkDetail({ pageContext }) {
   };
 
   return <>
-    <SEO title={ title } description={ abstract } ogpimg={ topimg } />
+    <SEO title={ title } description={ abstract } ogpimg={ topimg.file.url } />
     <Header />
     <main>
       <div className="work-info">
         <div className="wrapper">
-          <img src={ topimg } alt="" className="thumnail" />
+          <GatsbyImage
+            image={topimg.gatsbyImageData}
+            alt={topimg.title}
+            className="thumnail"
+          />
           <div className="category"><span>{ category.toUpperCase() }</span></div>
           <h1 className="title">{ title }</h1>
           <div className="year">{ year }年</div>
@@ -46,8 +51,13 @@ export default function WorkDetail({ pageContext }) {
       </div>
       <div className="imgs">
       {
-        pageContext.post.subimgs && pageContext.post.subimgs.map(ele => {
-          return <img src={ ele.file.url } alt="" />
+        pageContext.post.subimgs && pageContext.post.subimgs.map(subimg => {
+          return <>
+            <GatsbyImage
+              image={subimg.gatsbyImageData}
+              alt={subimg.title}
+            />
+          </>
         })
       }
       </div>

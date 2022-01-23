@@ -1,5 +1,6 @@
 import React from "react";
 import { graphql, Link } from "gatsby";
+import { GatsbyImage } from 'gatsby-plugin-image'
 import { sns_url } from "../components/constant";
 import Header from "../components/header";
 import Footer from "../components/footer";
@@ -11,7 +12,11 @@ export default function Top({ data }) {
   const list = data.allContentfulPortfolio.edges.map(edge => {
     return <>
       <Link to={`/work/${edge.node.slug}/`} className="work-box">
-        <img src={ edge.node.thumnail.file.url } alt="" className="thum" />
+        <GatsbyImage
+          image={edge.node.thumnail.gatsbyImageData}
+          alt={edge.node.thumnail.title}
+          className="thumnail"
+        />
         <h2 className="title">{ edge.node.title }</h2>
         <p className="description">{ edge.node.abstract }</p>
         <p className="detail">{ edge.node.category.toUpperCase() }・{ edge.node.year }・{ edge.node.client }</p>
@@ -78,9 +83,8 @@ export const query = graphql`
             description
           }
           thumnail {
-            file {
-              url
-            }
+            title
+            gatsbyImageData
           }
         }
       }
