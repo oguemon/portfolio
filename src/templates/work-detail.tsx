@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { GatsbyImage } from 'gatsby-plugin-image'
+import { GatsbyImage, getImage, getSrc } from 'gatsby-plugin-image'
 import { techIcon } from "../components/constant";
 import Header from "../components/header";
 import Footer from "../components/footer";
@@ -10,6 +10,7 @@ export default function WorkDetail({ pageContext }) {
 
   const { abstract, category, client, role, tech, title, url, year } = pageContext.post;
   const description = pageContext.post.description.description;
+  const ogp_url = getSrc(getImage(pageContext.post.thumnail));
   const topimg = pageContext.post.topimg;
 
   const tech_names = tech.split(",");
@@ -28,7 +29,7 @@ export default function WorkDetail({ pageContext }) {
   };
 
   return <>
-    <SEO title={ title } description={ abstract } ogpimg={ topimg.file.url } />
+    <SEO title={ title } description={ abstract } ogpimg={ ogp_url } />
     <Header />
     <main>
       <div className="work-info">
