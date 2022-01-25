@@ -54,10 +54,12 @@ export default function WorkDetail({ pageContext }) {
       {
         pageContext.post.subimgs && pageContext.post.subimgs.map(subimg => {
           return <>
-            <GatsbyImage
-              image={subimg.gatsbyImageData}
-              alt={subimg.title}
-            />
+            <div className="img-container">
+              <GatsbyImage
+                image={subimg.gatsbyImageData}
+                alt={subimg.title}
+              />
+            </div>
           </>
         })
       }
