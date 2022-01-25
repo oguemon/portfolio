@@ -42,8 +42,11 @@
         .thumnail {
             width: 100%;
             margin-bottom: 15px;
-            border-radius: 5px;
             display: block;
+
+            img {
+                border-radius: 5px;
+            }
         }
 
         h2.title {
