@@ -81,7 +81,9 @@ export default function Profile() {
           </div>
           <h2 className="profile-section">SKILL</h2>
           <div className="skill-list">{ skills }</div>
-          <h2 className="profile-section">CERTIFICATIONS</h2>
+        <h2 className="profile-section">CERTIFICATIONS</h2>
+        </div>
+        <div className="certification-list-wrapper">
           <div className="certification-list">
             <div className="certification-item ap">
               <div className="name">応用情報技術者</div>
@@ -108,6 +110,8 @@ export default function Profile() {
               </div>
             </div>
           </div>
+        </div>
+        <div className="wrapper">
           <h2 className="profile-section">AWARDS</h2>
           <div className="award-list">
             <div className="award-item">

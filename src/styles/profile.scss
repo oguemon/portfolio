@@ -55,6 +55,20 @@
         }
     }
 
+    .certification-list-wrapper {
+        width: 100%;
+        min-width: var(--min-width-pc);
+        margin: 0 auto;
+        padding: 40px 0;
+        background-color: var(--color-certification-list-wrapper-bg);
+
+        @include mobile {
+            width: 100%;
+            min-width: auto;
+            padding: 20px 0;
+        }
+    }
+
     .certification-list {
         width: 1080px;
         margin: 0 auto;
@@ -73,7 +87,7 @@
             width: 310px;
             padding: 20px;
             position: relative;
-            border: 1px solid var(--color-certification-item-border);
+            background-color: var(--color-certification-item-bg);
             border-radius: 5px;
 
             @include mobile {
