@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { Link } from "gatsby";
+import { StaticImage } from "gatsby-plugin-image";
 import { sns_url, techIcon } from "../components/constant";
 import Header from "../components/header";
 import Footer from "../components/footer";
@@ -80,6 +81,39 @@ export default function Profile() {
               </div>
           </div>
           <h2 className="profile-section">SKILL</h2>
+          <div className="skill-main-list">
+            <div className="skill-main-item">
+              <StaticImage className="thum" src="../assets/skill-1.svg" alt="UI/UXを前提としたデザイン" />
+              <div className="skill-info">
+                <div className="title">UI/UXを前提としたデザイン</div>
+                <div className="description">
+                  私がつくるプロダクトは、利用者の導線を考慮し、心理学的知見に基づいた使い勝手の良さや視認性の高さを常に重視しています。
+                  利用者にとって使いやすいものの製作に強みを持ちます。
+                </div>
+              </div>
+            </div>
+            <div className="skill-main-item">
+              <StaticImage className="thum" src="../assets/skill-2.svg" alt="SEO対策やSNSを考えた実装" />
+              <div className="skill-info">
+                <div className="title">SEO対策やSNSを考えた実装</div>
+                <div className="description">
+                  Webサイトは訪問されることに意味があります。
+                  検索エンジンに正しく情報を伝え、SNS共有時にはリンク表示を最適化する。
+                  こうしたアクセス向上に寄与する各種の実装ができます。
+                </div>
+              </div>
+            </div>
+            <div className="skill-main-item">
+              <StaticImage className="thum" src="../assets/skill-3.svg" alt="デザインもフロント/バックエンドも" />
+              <div className="skill-info">
+                <div className="title">デザインもフロント/バックエンドも</div>
+                <div className="description">
+                  デザインは、Webサイトのみならず、ロゴデザインや印刷物、広報用画像も可能です。
+                  さらにWebサイトの設計実装は、ブラウザ側に加えてAPIやDBを絡めたサーバサイドにも対応できます。
+                </div>
+              </div>
+            </div>
+          </div>
           <div className="skill-list">{ skills }</div>
         <h2 className="profile-section">CERTIFICATIONS</h2>
         </div>
