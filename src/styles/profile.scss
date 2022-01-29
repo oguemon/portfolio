@@ -1,8 +1,21 @@
 @import 'define';
 
 .profile {
+    section {
+        margin-top: 40px;
+
+        &:first-of-type {
+            margin-top: 0;
+        }
+
+        &.certifications {
+            padding: 40px 0;
+            background-color: var(--color-certification-list-wrapper-bg);
+        }
+    }
+
     h2.profile-section {
-        margin-top: 60px;
+        margin-top: 0;
         margin-bottom: 40px;
         color: var(--color-theme);
         font-family: "Poppins";
@@ -107,20 +120,6 @@
                 font-size: 14px;
                 line-height: 32px;
             }
-        }
-    }
-
-    .certification-list-wrapper {
-        width: 100%;
-        min-width: var(--min-width-pc);
-        margin: 0 auto;
-        padding: 40px 0;
-        background-color: var(--color-certification-list-wrapper-bg);
-
-        @include mobile {
-            width: 100%;
-            min-width: auto;
-            padding: 20px 0;
         }
     }
 
