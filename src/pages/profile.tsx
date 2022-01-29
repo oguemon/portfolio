@@ -1,11 +1,13 @@
 import React, { useState } from "react";
 import { Link } from "gatsby";
-import { StaticImage } from "gatsby-plugin-image";
 import { sns_url, techIcon } from "../components/constant";
 import Header from "../components/header";
 import Footer from "../components/footer";
 import SEO from "../components/seo";
 import "../styles/profile.scss";
+import skill_1 from "../assets/skill-1.svg";
+import skill_2 from "../assets/skill-2.svg";
+import skill_3 from "../assets/skill-3.svg";
 
 export default function Profile() {
 
@@ -88,7 +90,7 @@ export default function Profile() {
             <h2 className="profile-section">SKILL</h2>
             <div className="skill-main-list">
               <div className="skill-main-item">
-                <StaticImage className="thum" src="../assets/skill-1.svg" alt="UI/UXを前提としたデザイン" />
+                <img className="thum" src={ skill_1 } alt="UI/UXを前提としたデザイン" />
                 <div className="skill-info">
                   <div className="title">UI/UXを前提としたデザイン</div>
                   <div className="description">
@@ -98,7 +100,7 @@ export default function Profile() {
                 </div>
               </div>
               <div className="skill-main-item">
-                <StaticImage className="thum" src="../assets/skill-2.svg" alt="SEO対策やSNSを考えた実装" />
+                <img className="thum" src={ skill_2 } alt="SEO対策やSNSを考えた実装" />
                 <div className="skill-info">
                   <div className="title">SEO対策やSNSを考えた実装</div>
                   <div className="description">
@@ -109,7 +111,7 @@ export default function Profile() {
                 </div>
               </div>
               <div className="skill-main-item">
-                <StaticImage className="thum" src="../assets/skill-3.svg" alt="デザインもフロント/バックエンドも" />
+                <img className="thum" src={ skill_3 } alt="デザインもフロント/バックエンドも" />
                 <div className="skill-info">
                   <div className="title">デザインもフロント/バックエンドも</div>
                   <div className="description">

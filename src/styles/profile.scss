@@ -50,13 +50,11 @@
                 width: 200px;
                 height: 200px;
                 margin: 0 auto 20px;
-                // 並列する.gatsby-image-wrapper-constrainedがinline-blockのため上書き
-                display: block;
 
                 @include mobile {
                     width: 100px;
                     height: 100px;
-                    flex-direction: row;
+                    margin: 0;
                 }
             }
 
