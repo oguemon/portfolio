@@ -94,8 +94,8 @@ export default function Profile() {
                 <div className="skill-info">
                   <div className="title">UI/UXを前提としたデザイン</div>
                   <div className="description">
-                    私がつくるプロダクトは、利用者の導線を考慮し、心理学的知見に基づいた使い勝手の良さや視認性の高さを常に重視しています。
-                    利用者にとって使いやすいものの製作に強みを持ちます。
+                    デザインでは、使い勝手の良さや視認性の高さを常に重視しており、心理学的な知見に基づいてこれを追求します。
+                    利用者にとって使いやすいものを作ることに強みを持ちます。
                   </div>
                 </div>
               </div>
@@ -105,8 +105,8 @@ export default function Profile() {
                   <div className="title">SEO対策やSNSを考えた実装</div>
                   <div className="description">
                     Webサイトは訪問されることに意味があります。
-                    検索エンジンに正しく情報を伝え、SNS共有時にはリンク表示を最適化する。
-                    こうしたアクセス向上に寄与する各種の実装ができます。
+                    検索エンジンに正しく情報を伝え、SNS共有時のリンク表示を最適化する。
+                    アクセス向上に寄与するこれらの実装ができます。
                   </div>
                 </div>
               </div>
@@ -115,8 +115,8 @@ export default function Profile() {
                 <div className="skill-info">
                   <div className="title">デザインもフロント/バックエンドも</div>
                   <div className="description">
-                    デザインは、Webサイトのみならず、ロゴデザインや印刷物、広報用画像も可能です。
-                    さらにWebサイトの設計実装は、ブラウザ側に加えてAPIやDBを絡めたサーバサイドにも対応できます。
+                    デザインは、Webサイトのみならず、ロゴや印刷物、広報用画像も手掛けます。
+                    さらに、Webサイトの設計実装は、ブラウザ側はもちろん、APIやDBが絡むサーバ側もカバーします。
                   </div>
                 </div>
               </div>
