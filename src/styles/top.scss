@@ -28,7 +28,9 @@
     video {
         min-width: 100%;
         min-height: 100%;
-        background-color: var(--color-hero-bg);
+        background-image: url(../assets/hero.jpg);
+        background-size: cover;
+        background-position: center;
         object-fit: cover;
         position: absolute;
         z-index: -1;
