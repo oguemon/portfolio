@@ -2,15 +2,46 @@
 
 .hero {
     min-width: var(--min-width-pc);
-    height: 350px;
-    background-color: var(--color-hero-bg);
+    height: 480px;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 
     @include mobile {
         min-width: 100%;
     }
 
-    li.hero-img {
-        list-style-type: none;
+    &:before {
+        content: '';
+        background-image: url(../assets/hero_bg.png);
+        background-position: left top;
+        background-repeat: repeat;
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+    }
+
+    video {
+        min-width: 100%;
+        min-height: 100%;
+        background-color: var(--color-hero-bg);
+        object-fit: cover;
+        position: absolute;
+        z-index: -1;
+    }
+
+    .title-container {
+        color: var(--color-hero-text);
+        text-shadow: 0 0 10px var(--color-hero-shadow);
+        z-index: 1;
+
+        .title-main {
+            padding-top: 0;
+        }
     }
 }
 

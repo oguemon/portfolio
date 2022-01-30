@@ -6,6 +6,7 @@ import Header from "../components/header";
 import Footer from "../components/footer";
 import SEO from "../components/seo";
 import "../styles/top.scss";
+import hero from "../assets/hero.mp4";
 
 export default function Top({ data }) {
 
@@ -28,19 +29,15 @@ export default function Top({ data }) {
     <SEO title="小倉 且也" description="デザインから実装までを手がけるWeb開発者・小倉 且也のポートフォリオサイトです。" />
     <Header />
     <div className="hero">
-      <div className="wrapper">
-        <div className="title-container">
-          <h1 className="title-main">OGURA KATSUYA</h1>
-          <div className="title-sub">Web Designer / Engineer</div>
-          <div className="sns-btn-list">
-            <a href={sns_url.twitter}   target="_blank" rel="noreferrer" className="sns-btn twitter" aria-label="twitter"></a>
-            <a href={sns_url.instagram} target="_blank" rel="noreferrer" className="sns-btn instagram" aria-label="instagram"></a>
-            <a href={sns_url.github}    target="_blank" rel="noreferrer" className="sns-btn github" aria-label="github"></a>
-          </div>
+      <video src={ hero } autoPlay loop muted playsInline preload="auto">お使いのブラウザでは再生できません。</video>
+      <div className="title-container">
+        <h1 className="title-main">OGURA KATSUYA</h1>
+        <div className="title-sub">Web Designer / Engineer</div>
+        <div className="sns-btn-list">
+          <a href={sns_url.twitter}   target="_blank" rel="noreferrer" className="sns-btn twitter" aria-label="twitter"></a>
+          <a href={sns_url.instagram} target="_blank" rel="noreferrer" className="sns-btn instagram" aria-label="instagram"></a>
+          <a href={sns_url.github}    target="_blank" rel="noreferrer" className="sns-btn github" aria-label="github"></a>
         </div>
-        <ul className="hero-img-list">
-          <li className="hero-img"></li>
-        </ul>
       </div>
     </div>
     <main>
