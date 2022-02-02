@@ -29,7 +29,7 @@ export default function Top({ data }) {
     <SEO title="小倉 且也" description="デザインから実装までを手がけるWeb開発者・小倉 且也のポートフォリオサイトです。" />
     <Header />
     <div className="hero">
-      <video src={ hero } autoPlay loop muted playsInline preload="auto">お使いのブラウザでは再生できません。</video>
+      <video src={ hero } autoPlay loop muted playsInline>お使いのブラウザでは再生できません。</video>
       <div className="title-container">
         <h1 className="title-main">OGURA KATSUYA</h1>
         <div className="title-sub">Web Designer / Engineer</div>
