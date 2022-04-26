@@ -466,6 +466,26 @@
                         max-height: 300px;
                     }
                 }
+
+                .link {
+                    margin-top: 10px;
+                    color: var(--color-theme);
+                    text-decoration: none;
+                    display: block;
+
+                    &:before {
+                        width: 14px;
+                        height: 14px;
+                        margin-right: 5px;
+                        content: "";
+                        display: inline-block;
+                        background-image: url(../assets/icon-link.svg);
+                    }
+
+                    &:hover {
+                        text-decoration: underline;
+                    }
+                }
             }
         }
     }

@@ -204,6 +204,7 @@ export default function Profile() {
                     家屋や森林など地上の物体を捉えた3次元データ（3次元点群）から目標物を抽出する手法を研究していました。
                     研究データの取得を通じて培ったドローンの自動制御プログラムの実装ノウハウを活用して、
                     高等専門学校生に対して画像認識に基づくドローン制御プログラムの指導なども行いました。
+                    <a className="link" href="https://www-higashi.ist.osaka-u.ac.jp/~k-ogura/" target="_blank">研究室の個人ページ</a>
                   </div>
                 </div>
               </div>
