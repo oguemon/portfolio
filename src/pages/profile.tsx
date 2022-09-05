@@ -41,7 +41,8 @@ export default function Profile() {
 
   const [setActiveSchoolB, setActiveStateSchoolB] = useState(false);
   const [setActiveSchoolM, setActiveStateSchoolM] = useState(false);
-  const [setActiveWork, setActiveStateWork] = useState(false);
+  const [setActiveWork1, setActiveStateWork1] = useState(false);
+  const [setActiveWork2, setActiveStateWork2] = useState(false);
   const toggleAccordion = (target) => {
     if (target == "school_b") {
       setActiveStateSchoolB(!setActiveSchoolB);
@@ -51,8 +52,12 @@ export default function Profile() {
       setActiveStateSchoolM(!setActiveSchoolM);
       return;
     }
-    if (target == "work") {
-      setActiveStateWork(!setActiveWork);
+    if (target == "work1") {
+      setActiveStateWork1(!setActiveWork1);
+      return;
+    }
+    if (target == "work2") {
+      setActiveStateWork2(!setActiveWork2);
       return;
     }
   };
@@ -208,17 +213,31 @@ export default function Profile() {
                   </div>
                 </div>
               </div>
-              <div className="career-item now">
+              <div className="career-item">
                 <div className="left-box">
-                  <div className="period">2019 -</div>
+                  <div className="period">2019 - 2022</div>
                 </div>
                 <div className="right-box">
-                  <div className={"info work" + (setActiveWork? " open" : "")} onClick={() => toggleAccordion("work")}>
+                  <div className={"info work" + (setActiveWork1? " open" : "")} onClick={() => toggleAccordion("work1")}>
                     <div className="name">三菱電機株式会社</div>
                     <div className="subname">バックエンドエンジニア</div>
                   </div>
-                  <div className={"description" + (setActiveWork? " open" : "")}>
+                  <div className={"description" + (setActiveWork1? " open" : "")}>
                     数百万人規模の利用者を誇るWebサービスのバックエンド処理の設計実装、プロジェクト進行支援を担当しています。
+                  </div>
+                </div>
+              </div>
+              <div className="career-item now">
+                <div className="left-box">
+                  <div className="period">2022 -</div>
+                </div>
+                <div className="right-box">
+                  <div className={"info work" + (setActiveWork2? " open" : "")} onClick={() => toggleAccordion("work2")}>
+                    <div className="name">サイボウズ株式会社</div>
+                    <div className="subname">フロントエンドエンジニア</div>
+                  </div>
+                  <div className={"description" + (setActiveWork2? " open" : "")}>
+                    クラウド型の業務アプリ構築サービス「kintone」のフロントエンド刷新プロジェクト（フロリア）に参画しています。
                   </div>
                 </div>
               </div>
