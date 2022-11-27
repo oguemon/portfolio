@@ -17,19 +17,16 @@
     "start": "gatsby serve"
   },
   "dependencies": {
-    "@types/react-helmet": "^6.1.5",
     "dotenv": "^16.0.3",
     "fontsource-oswald": "^4.0.0",
     "fontsource-poppins": "^4.0.0",
     "gatsby": "^5.2.0",
     "gatsby-plugin-google-analytics": "^5.2.0",
     "gatsby-plugin-image": "^3.2.0",
-    "gatsby-plugin-react-helmet": "^6.2.0",
     "gatsby-plugin-sass": "^6.2.0",
     "gatsby-source-contentful": "^8.2.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "react-helmet": "^6.1.0",
     "sass": "^1.56.1"
   },
   "private": true

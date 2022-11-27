@@ -6,11 +6,16 @@ import Footer from "../components/footer";
 import SEO from "../components/seo";
 import "../styles/workdetail.scss";
 
+export const Head = ({ pageContext }) => {
+  const { abstract, title } = pageContext.post;
+  const ogp_url = getSrc(getImage(pageContext.post.thumnail));
+  return <SEO title={ title } description={ abstract } ogpimg={ ogp_url } />
+}
+
 export default function WorkDetail({ pageContext }) {
 
-  const { abstract, category, client, role, tech, title, url, year } = pageContext.post;
+  const { category, client, role, tech, title, url, year } = pageContext.post;
   const description = pageContext.post.description.description;
-  const ogp_url = getSrc(getImage(pageContext.post.thumnail));
   const topimg = pageContext.post.topimg;
 
   const tech_names = tech.split(",");
@@ -29,7 +34,6 @@ export default function WorkDetail({ pageContext }) {
   };
 
   return <>
-    <SEO title={ title } description={ abstract } ogpimg={ ogp_url } />
     <Header />
     <main>
       <div className="work-info">

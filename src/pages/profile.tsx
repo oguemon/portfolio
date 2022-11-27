@@ -9,6 +9,8 @@ import skill_1 from "../assets/skill-1.svg";
 import skill_2 from "../assets/skill-2.svg";
 import skill_3 from "../assets/skill-3.svg";
 
+export const Head = () => <SEO title="PROFILE" description="デザインから実装までを手がけるWeb開発者・小倉 且也の紹介です。" />
+
 export default function Profile() {
 
   const skill_names = [
@@ -63,7 +65,6 @@ export default function Profile() {
   };
 
   return <>
-    <SEO title="PROFILE" description="デザインから実装までを手がけるWeb開発者・小倉 且也の紹介です。" />
     <Header />
     <div className="wrapper">
       <div className="title-container">

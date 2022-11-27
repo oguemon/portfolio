@@ -8,6 +8,8 @@ import SEO from "../components/seo";
 import "../styles/top.scss";
 import hero from "../assets/hero.mp4";
 
+export const Head = () => <SEO title="小倉 且也" description="デザインから実装までを手がけるWeb開発者・小倉 且也のポートフォリオサイトです。" />
+
 export default function Top({ data }) {
 
   const list = data.allContentfulPortfolio.edges.map(edge => {
@@ -26,7 +28,6 @@ export default function Top({ data }) {
   });
 
   return <>
-    <SEO title="小倉 且也" description="デザインから実装までを手がけるWeb開発者・小倉 且也のポートフォリオサイトです。" />
     <Header />
     <div className="hero">
       <video src={ hero } autoPlay loop muted playsInline>お使いのブラウザでは再生できません。</video>
@@ -63,7 +64,7 @@ export default function Top({ data }) {
 export const query = graphql`
   query MyQuery {
     allContentfulPortfolio (
-      sort: { fields: year, order: DESC }
+      sort: { year: DESC }
     ) {
       edges {
         node {
