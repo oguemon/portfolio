@@ -11,6 +11,11 @@
     "type": "git",
     "url": "https://github.com/oguemon/portfolio"
   },
+  "scripts": {
+    "dev": "gatsby develop",
+    "build": "gatsby build",
+    "start": "gatsby serve"
+  },
   "dependencies": {
     "@types/react-helmet": "^6.1.5",
     "dotenv": "^16.0.0",
