@@ -30,5 +30,8 @@
     "react-dom": "18.2.0",
     "sass": "1.66.1"
   },
+  "resolutions": {
+    "got": "11.8.6"
+  },
   "private": true
 }
