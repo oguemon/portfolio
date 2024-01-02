@@ -45,6 +45,7 @@ export default function Profile() {
   const [setActiveSchoolM, setActiveStateSchoolM] = useState(false);
   const [setActiveWork1, setActiveStateWork1] = useState(false);
   const [setActiveWork2, setActiveStateWork2] = useState(false);
+  const [setActiveWork3, setActiveStateWork3] = useState(false);
   const toggleAccordion = (target) => {
     if (target == "school_b") {
       setActiveStateSchoolB(!setActiveSchoolB);
@@ -60,6 +61,10 @@ export default function Profile() {
     }
     if (target == "work2") {
       setActiveStateWork2(!setActiveWork2);
+      return;
+    }
+    if (target == "work3") {
+      setActiveStateWork3(!setActiveWork3);
       return;
     }
   };
@@ -224,7 +229,8 @@ export default function Profile() {
                     <div className="subname">バックエンドエンジニア</div>
                   </div>
                   <div className={"description" + (setActiveWork1? " open" : "")}>
-                    数百万人規模の利用者を誇るWebサービスのバックエンド処理の設計実装、プロジェクト進行支援を担当しています。
+                    新卒入社以来、数百万人規模の利用者を誇るWebサービスのバックエンド処理の設計実装、プロジェクト進行支援を担当していました。
+                    <a className="link" href="https://www.mitsubishielectric.co.jp/saiyo/graduates/philosophy/place/it/" target="_blank">事業部の紹介ページ</a>
                   </div>
                 </div>
               </div>
@@ -238,7 +244,23 @@ export default function Profile() {
                     <div className="subname">フロントエンドエンジニア</div>
                   </div>
                   <div className={"description" + (setActiveWork2? " open" : "")}>
-                    クラウド型の業務アプリ構築サービス「kintone」のフロントエンド刷新プロジェクト（フロリア）に参画しています。
+                    クラウド型の業務アプリ構築サービス「kintone」のフロントエンド刷新プロジェクト（通称フロリア）に参画しています。
+                    <a className="link" href="https://blog.cybozu.io/entry/2022/02/04/171154" target="_blank">プロジェクトの紹介ページ</a>
+                  </div>
+                </div>
+              </div>
+              <div className="career-item now">
+                <div className="left-box">
+                  <div className="period">2023 -</div>
+                </div>
+                <div className="right-box">
+                  <div className={"info work" + (setActiveWork3? " open" : "")} onClick={() => toggleAccordion("work3")}>
+                    <div className="name">株式会社Next Finance Tech</div>
+                    <div className="subname">フロントエンドエンジニア</div>
+                  </div>
+                  <div className={"description" + (setActiveWork3? " open" : "")}>
+                    業務委託メンバーとして、暗号通貨にまつわる各種レポートを配信する自社メディア「Ledifiリサーチ」をはじめとする各種サービスの設計開発を担当しています。
+                    <a className="link" href="https://nxt-fintech.com/" target="_blank">会社の公式ページ</a>
                   </div>
                 </div>
               </div>
