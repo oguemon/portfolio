@@ -31,7 +31,7 @@
     "sass": "1.69.6"
   },
   "resolutions": {
-    "got": "11.8.6"
+    "got": "14.0.0"
   },
   "private": true
 }
