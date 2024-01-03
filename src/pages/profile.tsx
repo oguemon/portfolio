@@ -23,6 +23,7 @@ export default function Profile() {
     "Java",
     "JavaScript",
     "LaTeX",
+    "Premiere Pro",
     "PhotoShop",
     "PHP",
     "React",

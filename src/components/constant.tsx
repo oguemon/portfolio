@@ -1,5 +1,6 @@
 import tech_adobe_ai from "../assets/tech/adobe-ai.svg";
 import tech_adobe_id from "../assets/tech/adobe-id.svg";
+import tech_adobe_pr from "../assets/tech/adobe-pr.svg";
 import tech_adobe_ps from "../assets/tech/adobe-ps.svg";
 import tech_adobe_xd from "../assets/tech/adobe-xd.svg";
 import tech_android from "../assets/tech/android.svg";
@@ -40,6 +41,7 @@ export const techIcon = tech_name => {
         case "Java": return tech_java;
         case "JavaScript": return tech_javascript;
         case "LaTeX": return tech_latex;
+        case "Premiere Pro": return tech_adobe_pr;
         case "PhotoShop": return tech_adobe_ps;
         case "PHP": return tech_php;
         case "React": return tech_react;
