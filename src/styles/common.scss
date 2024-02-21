@@ -50,7 +50,7 @@ body {
     }
 
     .sns-btn-list {
-        width: 120px;
+        width: 165px;
         margin: 20px auto 0;
         display: flex;
         justify-content: space-between;
@@ -62,8 +62,8 @@ body {
             transition-duration: 200ms;
             display: block;
 
-            &.twitter {
-                background-image: url(../assets/media/twitter.svg);
+            &.x {
+                background-image: url(../assets/media/x.svg);
             }
 
             &.instagram {
@@ -72,6 +72,10 @@ body {
 
             &.github {
                 background-image: url(../assets/media/github.svg);
+            }
+
+            &.zenn {
+                background-image: url(../assets/media/zenn.svg);
             }
 
             &:hover {

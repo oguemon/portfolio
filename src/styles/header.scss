@@ -50,7 +50,7 @@ header {
         flex-direction: row;
         position: absolute;
         top: 0;
-        right: 160px;
+        right: 205px;
 
         a.menu-item {
             color: var(--color-text-base);
@@ -71,7 +71,7 @@ header {
     }
 
     .sns-btn-list {
-        width: 120px;
+        width: 165px;
         display: flex;
         justify-content: space-between;
         position: absolute;
@@ -85,8 +85,8 @@ header {
             transition-duration: 200ms;
             display: block;
 
-            &.twitter {
-                background-image: url(../assets/media/twitter.svg);
+            &.x {
+                background-image: url(../assets/media/x.svg);
             }
 
             &.instagram {
@@ -95,6 +95,10 @@ header {
             
             &.github {
                 background-image: url(../assets/media/github.svg);
+            }
+
+            &.zenn {
+                background-image: url(../assets/media/zenn.svg);
             }
     
             &:hover {

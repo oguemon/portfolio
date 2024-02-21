@@ -37,9 +37,10 @@ export default function Header() {
             <Link to="//forms.gle/SDnHnzGLH5Y4ynzz6" target="_blank" className="menu-item">CONTACT</Link>
           </div>
           <div className="sns-btn-list">
-            <a href={sns_url.twitter}   target="_blank" rel="noreferrer" className="sns-btn twitter"></a>
+            <a href={sns_url.x}         target="_blank" rel="noreferrer" className="sns-btn x"></a>
             <a href={sns_url.instagram} target="_blank" rel="noreferrer" className="sns-btn instagram"></a>
             <a href={sns_url.github}    target="_blank" rel="noreferrer" className="sns-btn github"></a>
+            <a href={sns_url.zenn}      target="_blank" rel="noreferrer" className="sns-btn zenn"></a>
           </div>
         </div>
         <div className="sp-menu-btn" onClick={openSpMenu}></div>
@@ -68,9 +69,10 @@ export default function Header() {
           </Link>
         </div>
         <div className="sns-btn-list">
-          <a href={sns_url.twitter}   target="_blank" rel="noreferrer" className="sns-btn twitter"></a>
+          <a href={sns_url.x}         target="_blank" rel="noreferrer" className="sns-btn x"></a>
           <a href={sns_url.instagram} target="_blank" rel="noreferrer" className="sns-btn instagram"></a>
           <a href={sns_url.github}    target="_blank" rel="noreferrer" className="sns-btn github"></a>
+          <a href={sns_url.zenn}      target="_blank" rel="noreferrer" className="sns-btn zenn"></a>
         </div>
       </div>
     </div>

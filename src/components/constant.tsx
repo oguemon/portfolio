@@ -24,9 +24,10 @@ export const site_baseurl = "https://ogura.biz";
 
 // SNSのURL
 export const sns_url = {
-    twitter:   "https://twitter.com/oguemon_com/",
+    x:         "https://x.com/oguemon_com",
     instagram: "https://instagram.com/oguemon_com/",
     github:    "https://github.com/oguemon/",
+    zenn:      "https://zenn.dev/oguemon",
 };
 
 // 技術のアイコン

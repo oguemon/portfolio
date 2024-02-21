@@ -35,9 +35,10 @@ export default function Top({ data }) {
         <h1 className="title-main">OGURA KATSUYA</h1>
         <div className="title-sub">Web Designer / Engineer</div>
         <div className="sns-btn-list">
-          <a href={sns_url.twitter}   target="_blank" rel="noreferrer" className="sns-btn twitter" aria-label="twitter"></a>
+          <a href={sns_url.x}         target="_blank" rel="noreferrer" className="sns-btn x" aria-label="X"></a>
           <a href={sns_url.instagram} target="_blank" rel="noreferrer" className="sns-btn instagram" aria-label="instagram"></a>
           <a href={sns_url.github}    target="_blank" rel="noreferrer" className="sns-btn github" aria-label="github"></a>
+          <a href={sns_url.zenn}      target="_blank" rel="noreferrer" className="sns-btn zenn" aria-label="zenn"></a>
         </div>
       </div>
     </div>
