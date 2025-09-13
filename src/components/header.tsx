@@ -34,6 +34,7 @@ export default function Header() {
           <div className="menu-list">
             <Link to="/" className="menu-item">TOP</Link>
             <Link to="/profile" className="menu-item">PROFILE</Link>
+            <Link to="/presentation" className="menu-item">PRESENTATION</Link>
             <Link to="//forms.gle/SDnHnzGLH5Y4ynzz6" target="_blank" className="menu-item">CONTACT</Link>
           </div>
           <div className="sns-btn-list">
@@ -62,6 +63,10 @@ export default function Header() {
           <Link to="/profile" className="menu-item">
             <span className="en">PROFILE</span>
             <span className="ja">自己紹介</span>
+          </Link>
+          <Link to="/presentation" className="menu-item">
+            <span className="en">PRESENTATION</span>
+            <span className="ja">登壇実績</span>
           </Link>
           <Link to="//forms.gle/SDnHnzGLH5Y4ynzz6" target="_blank" className="menu-item">
             <span className="en">CONTACT</span>
