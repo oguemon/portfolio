@@ -16,8 +16,9 @@ module.exports = {
     },
     {
       resolve: `gatsby-plugin-sass`,
+      api: 'modern',
       sassOptions: {
-        outputStyle: 'compressed',
+        style: 'compressed',
       },
     },
     {

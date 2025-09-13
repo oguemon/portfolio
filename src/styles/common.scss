@@ -1,4 +1,4 @@
-@import 'define';
+@use 'define';
 
 body {
     margin: 0;
@@ -18,7 +18,7 @@ body {
     margin: 0 auto;
     position: relative;
 
-    @include mobile {
+    @include define.mobile {
         width: 100%;
     }
 }
@@ -34,7 +34,7 @@ body {
         font-size: 42px;
         font-weight: 600;
 
-        @include mobile {
+        @include define.mobile {
             font-size: 32px;
         }
     }
@@ -44,7 +44,7 @@ body {
         font-size: 16px;
         font-weight: 300;
 
-        @include mobile {
+        @include define.mobile {
             font-size: 14px;
         }
     }
@@ -93,7 +93,7 @@ body {
         margin: 0 auto;
         text-align: justify;
 
-        @include mobile {
+        @include define.mobile {
             width: auto;
             margin: 0 15px;
             font-size: 14px;

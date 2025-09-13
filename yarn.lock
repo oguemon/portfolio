@@ -5452,10 +5452,10 @@ gatsby-plugin-page-creator@^5.14.0:
     globby "^11.1.0"
     lodash "^4.17.21"
 
-gatsby-plugin-sass@6.14.0:
-  version "6.14.0"
-  resolved "https://registry.yarnpkg.com/gatsby-plugin-sass/-/gatsby-plugin-sass-6.14.0.tgz#2814162418e6942e09413e324f6ce91c78ff06dd"
-  integrity sha512-3AirLeSpzGGqKDZNAGB33nfPXzPuQ6hGv3bYKhEeWMTapDAdaiF2BKLDSgcX+Dx30m2x8ZMlrDH3Krvsl5I5Vw==
+gatsby-plugin-sass@6.15.0:
+  version "6.15.0"
+  resolved "https://registry.yarnpkg.com/gatsby-plugin-sass/-/gatsby-plugin-sass-6.15.0.tgz#9d0df2ab28b3f0c88c06381d554535212c69e7dc"
+  integrity sha512-F2oHwcSKK9yg5wjo3cQzRa0jQkxyU3/3Tei8eMaz49/UXuhkRQ0y0uBegcyPeqBe4anOZQVdtRENeK0VSfkWFw==
   dependencies:
     "@babel/runtime" "^7.20.13"
     resolve-url-loader "^3.1.5"
@@ -8805,10 +8805,10 @@ sass-loader@^10.4.1:
     schema-utils "^3.0.0"
     semver "^7.3.2"
 
-sass@1.81.0:
-  version "1.81.0"
-  resolved "https://registry.yarnpkg.com/sass/-/sass-1.81.0.tgz#a9010c0599867909dfdbad057e4a6fbdd5eec941"
-  integrity sha512-Q4fOxRfhmv3sqCLoGfvrC9pRV8btc0UtqL9mN6Yrv6Qi9ScL55CVH1vlPP863ISLEEMNLLuu9P+enCeGHlnzhA==
+sass@1.92.1:
+  version "1.92.1"
+  resolved "https://registry.yarnpkg.com/sass/-/sass-1.92.1.tgz#07fb1fec5647d7b712685d1090628bf52456fe86"
+  integrity sha512-ffmsdbwqb3XeyR8jJR6KelIXARM9bFQe8A6Q3W4Klmwy5Ckd5gz7jgUNHo4UOqutU5Sk1DtKLbpDP0nLCg1xqQ==
   dependencies:
     chokidar "^4.0.0"
     immutable "^5.0.2"

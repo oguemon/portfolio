@@ -1,4 +1,4 @@
-@import 'define';
+@use 'define';
 
 .sp-menu {
     width: 100%;
@@ -11,7 +11,7 @@
     opacity: 0;
     transition-property: opacity;
     transition-duration: 200ms;
-    
+
     &.open{
         opacity: 1;
     }
@@ -45,7 +45,7 @@
         text-decoration: none;
         display: block;
 
-        @include mobile {
+        @include define.mobile {
             padding-top: 8px;
         }
 

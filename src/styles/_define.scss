@@ -1,3 +1,5 @@
+@use 'sass:color';
+
 :root {
     // Color Palette (Color Base)
     --color-black: #000;
@@ -6,38 +8,38 @@
     --color-white-rgb: 255, 255, 255;
 
     $color-gray: #26282a;
-    --color-gray-050: #{scale-color($color-gray, $lightness: 97%)};
-    --color-gray-100: #{scale-color($color-gray, $lightness: 95%)};
-    --color-gray-200: #{scale-color($color-gray, $lightness: 90%)};
-    --color-gray-300: #{scale-color($color-gray, $lightness: 80%)};
-    --color-gray-400: #{scale-color($color-gray, $lightness: 70%)};
-    --color-gray-500: #{scale-color($color-gray, $lightness: 60%)};
-    --color-gray-600: #{scale-color($color-gray, $lightness: 50%)};
-    --color-gray-700: #{scale-color($color-gray, $lightness: 35%)};
-    --color-gray-800: #{scale-color($color-gray, $lightness: 20%)};
-    --color-gray-900: #{scale-color($color-gray, $lightness: 0%)};
+    --color-gray-050: #{color.scale($color-gray, $lightness: 97%)};
+    --color-gray-100: #{color.scale($color-gray, $lightness: 95%)};
+    --color-gray-200: #{color.scale($color-gray, $lightness: 90%)};
+    --color-gray-300: #{color.scale($color-gray, $lightness: 80%)};
+    --color-gray-400: #{color.scale($color-gray, $lightness: 70%)};
+    --color-gray-500: #{color.scale($color-gray, $lightness: 60%)};
+    --color-gray-600: #{color.scale($color-gray, $lightness: 50%)};
+    --color-gray-700: #{color.scale($color-gray, $lightness: 35%)};
+    --color-gray-800: #{color.scale($color-gray, $lightness: 20%)};
+    --color-gray-900: #{color.scale($color-gray, $lightness: 0%)};
 
     $color-yellow: #ffe600;
-    --color-yellow-100: #{scale-color($color-yellow, $lightness: 95%)};
-    --color-yellow-200: #{scale-color($color-yellow, $lightness: 90%)};
-    --color-yellow-300: #{scale-color($color-yellow, $lightness: 80%)};
-    --color-yellow-400: #{scale-color($color-yellow, $lightness: 70%)};
-    --color-yellow-500: #{scale-color($color-yellow, $lightness: 60%)};
-    --color-yellow-600: #{scale-color($color-yellow, $lightness: 50%)};
-    --color-yellow-700: #{scale-color($color-yellow, $lightness: 35%)};
-    --color-yellow-800: #{scale-color($color-yellow, $lightness: 20%)};
-    --color-yellow-900: #{scale-color($color-yellow, $lightness: 0%)};
+    --color-yellow-100: #{color.scale($color-yellow, $lightness: 95%)};
+    --color-yellow-200: #{color.scale($color-yellow, $lightness: 90%)};
+    --color-yellow-300: #{color.scale($color-yellow, $lightness: 80%)};
+    --color-yellow-400: #{color.scale($color-yellow, $lightness: 70%)};
+    --color-yellow-500: #{color.scale($color-yellow, $lightness: 60%)};
+    --color-yellow-600: #{color.scale($color-yellow, $lightness: 50%)};
+    --color-yellow-700: #{color.scale($color-yellow, $lightness: 35%)};
+    --color-yellow-800: #{color.scale($color-yellow, $lightness: 20%)};
+    --color-yellow-900: #{color.scale($color-yellow, $lightness: 0%)};
 
     $color-blue: #0055ff;
-    --color-blue-100: #{scale-color($color-blue, $lightness: 95%)};
-    --color-blue-200: #{scale-color($color-blue, $lightness: 90%)};
-    --color-blue-300: #{scale-color($color-blue, $lightness: 80%)};
-    --color-blue-400: #{scale-color($color-blue, $lightness: 70%)};
-    --color-blue-500: #{scale-color($color-blue, $lightness: 60%)};
-    --color-blue-600: #{scale-color($color-blue, $lightness: 50%)};
-    --color-blue-700: #{scale-color($color-blue, $lightness: 35%)};
-    --color-blue-800: #{scale-color($color-blue, $lightness: 20%)};
-    --color-blue-900: #{scale-color($color-blue, $lightness: 0%)};
+    --color-blue-100: #{color.scale($color-blue, $lightness: 95%)};
+    --color-blue-200: #{color.scale($color-blue, $lightness: 90%)};
+    --color-blue-300: #{color.scale($color-blue, $lightness: 80%)};
+    --color-blue-400: #{color.scale($color-blue, $lightness: 70%)};
+    --color-blue-500: #{color.scale($color-blue, $lightness: 60%)};
+    --color-blue-600: #{color.scale($color-blue, $lightness: 50%)};
+    --color-blue-700: #{color.scale($color-blue, $lightness: 35%)};
+    --color-blue-800: #{color.scale($color-blue, $lightness: 20%)};
+    --color-blue-900: #{color.scale($color-blue, $lightness: 0%)};
 
     // Color Palette (Parts Base)
     --color-base: var(--color-white);

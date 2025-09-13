@@ -1,4 +1,4 @@
-@import 'define';
+@use 'define';
 
 header {
     height: 50px;
@@ -11,7 +11,7 @@ header {
         text-decoration: none;
         display: block;
 
-        @include mobile {
+        @include define.mobile {
             padding-top: 8px;
         }
 
@@ -20,7 +20,7 @@ header {
             font-weight: 600;
             line-height: 1;
 
-            @include mobile {
+            @include define.mobile {
                 font-size: 22px;
             }
         }
@@ -31,14 +31,14 @@ header {
             margin-top: 1px;
             margin-left: 1px;
 
-            @include mobile {
+            @include define.mobile {
                 font-size: 10px;
             }
         }
     }
 
     .pc-only-container {
-        @include mobile {
+        @include define.mobile {
             display: none;
         }
     }
@@ -92,7 +92,7 @@ header {
             &.instagram {
                 background-image: url(../assets/media/instagram.svg);
             }
-            
+
             &.github {
                 background-image: url(../assets/media/github.svg);
             }
@@ -100,7 +100,7 @@ header {
             &.zenn {
                 background-image: url(../assets/media/zenn.svg);
             }
-    
+
             &:hover {
                 opacity: 0.4;
             }
@@ -110,7 +110,7 @@ header {
     .sp-menu-btn {
         display: none;
 
-        @include mobile {
+        @include define.mobile {
             width: 50px;
             height: 50px;
             background-image: url(../assets/icon-menu-open.svg);
@@ -123,7 +123,7 @@ header {
             display: block;
             transition-property: background-color;
             transition-duration: 200ms;
-    
+
             &:hover {
                 background-color: var(--color-header-btn-bg-hover);
             }
