@@ -22,6 +22,9 @@ export const site_title = "OGURA KATSUYA";
 // サイトURL
 export const site_baseurl = "https://ogura.biz";
 
+// お問い合わせページのURL
+export const contact_url = "//forms.gle/SDnHnzGLH5Y4ynzz6";
+
 // SNSのURL
 export const sns_url = {
     x:         "https://x.com/oguemon_com",

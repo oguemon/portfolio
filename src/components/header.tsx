@@ -3,6 +3,7 @@ import { Link } from "gatsby";
 import "../styles/header.scss";
 import "../styles/spmenu.scss";
 import { SnsButtonList } from "./sns-button-list";
+import { contact_url } from "./constant";
 
 export default function Header() {
 
@@ -35,7 +36,7 @@ export default function Header() {
             <Link to="/" className="menu-item">TOP</Link>
             <Link to="/profile" className="menu-item">PROFILE</Link>
             <Link to="/presentation" className="menu-item">PRESENTATION</Link>
-            <Link to="//forms.gle/SDnHnzGLH5Y4ynzz6" target="_blank" className="menu-item">CONTACT</Link>
+            <a href={contact_url} target="_blank" className="menu-item">CONTACT</a>
           </div>
           <div className="sns-btn-list-container">
             <SnsButtonList />
@@ -65,10 +66,10 @@ export default function Header() {
             <span className="en">PRESENTATION</span>
             <span className="ja">登壇実績</span>
           </Link>
-          <Link to="//forms.gle/SDnHnzGLH5Y4ynzz6" target="_blank" className="menu-item">
+          <a href={contact_url} target="_blank" className="menu-item">
             <span className="en">CONTACT</span>
             <span className="ja">お問い合わせ</span>
-          </Link>
+          </a>
         </div>
         <SnsButtonList />
       </div>
