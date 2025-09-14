@@ -230,7 +230,7 @@
 }
 
 .imgs {
-    min-width: var(--min-width-pc);
+    min-width: calc(var(--min-width-pc) + 40px);
     width: 100%;
     margin-top: 50px;
 

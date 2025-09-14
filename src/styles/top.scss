@@ -1,7 +1,7 @@
 @use 'define';
 
 .hero {
-    min-width: var(--min-width-pc);
+    min-width: calc(var(--min-width-pc) + 40px);
     height: 480px;
     position: relative;
     overflow: hidden;

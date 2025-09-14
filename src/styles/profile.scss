@@ -2,6 +2,7 @@
 
 .profile {
     section {
+        min-width: calc(var(--min-width-pc) + 40px);
         margin-top: 40px;
 
         &:first-of-type {
@@ -11,6 +12,10 @@
         &.certifications {
             padding: 40px 0;
             background-color: var(--color-certification-list-wrapper-bg);
+        }
+
+        @include define.mobile {
+            min-width: auto;
         }
     }
 
