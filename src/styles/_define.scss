@@ -44,7 +44,7 @@
     // Color Palette (Parts Base)
     --color-base: var(--color-white);
     --color-base-transparent: rgba(var(--color-white-rgb), 0);
-    --color-theme: var(--color-blue-700);
+    --color-theme: var(--color-blue-900);
 
     --color-text-base: var(--color-gray-900);
     --color-text-sub: var(--color-gray-700);
@@ -56,8 +56,8 @@
     --color-border-gray-900: var(--color-gray-500);
     --color-border-white: var(--color-white);
 
-    --color-btn-text: var(--color-blue-700);
-    --color-btn-icon: var(--color-blue-700);
+    --color-btn-text: var(--color-blue-900);
+    --color-btn-icon: var(--color-blue-800);
     --color-btn-bg: var(--color-blue-100);
     --color-btn-bg-hover: transparent;
 
