@@ -12,6 +12,7 @@ import { SnsButtonList } from "../components/sns-button-list";
 import { Heading } from "../components/heading";
 import { SkillItem } from "../components/skill-item";
 import { SkillTag } from "../components/skill-tag";
+import { CertificationItem } from "../components/certification-item";
 
 export const Head = () => <SEO title="PROFILE" description="デザインから実装までを手がけるWeb開発者・小倉 且也の紹介です。" />
 
@@ -100,30 +101,27 @@ export default function Profile() {
           <div className="wrapper">
             <h2 className="profile-section">CERTIFICATIONS</h2>
             <div className="certification-list">
-              <div className="certification-item ap">
-                <div className="name">応用情報技術者</div>
-                <div className="when">2019年春期試験</div>
-                <div className="description">経済産業大臣が行う国家試験。高度IT人材となるために必要な応用的知識・技能をもち、高度IT人材としての方向性を確立した者を対象とします。</div>
-                <div className="links">
-                  <Link to="//www.jitec.ipa.go.jp/1_11seido/ap.html" target="_blank">試験の公式ページへ進む</Link>
-                </div>
-              </div>
-              <div className="certification-item nw">
-                <div className="name">ネットワークスペシャリスト</div>
-                <div className="when">2019年秋期試験</div>
-                <div className="description">経済産業大臣が行う国家試験。ネットワークの技術的専門性を持つことを認定する試験で、高度情報処理技術者試験に含まれます。</div>
-                <div className="links">
-                  <Link to="//www.jitec.ipa.go.jp/1_11seido/nw.html" target="_blank">試験の公式ページへ進む</Link>
-                </div>
-              </div>
-              <div className="certification-item db">
-                <div className="name">データベーススペシャリスト</div>
-                <div className="when">2021年秋期試験</div>
-                <div className="description">経済産業大臣が行う国家試験。データベースの技術的専門性を持つことを認定する試験で、高度情報処理技術者試験に含まれます。</div>
-                <div className="links">
-                  <Link to="//www.jitec.ipa.go.jp/1_11seido/db.html" target="_blank">試験の公式ページへ進む</Link>
-                </div>
-              </div>
+              <CertificationItem
+                type="ap"
+                name="応用情報技術者"
+                when="2019年春期試験"
+                description="経済産業大臣が行う国家試験。高度IT人材となるために必要な応用的知識・技能をもち、高度IT人材としての方向性を確立した者を対象とします。"
+                url="//www.ipa.go.jp/shiken/kubun/ap.html"
+              />
+              <CertificationItem
+                type="nw"
+                name="ネットワークスペシャリスト"
+                when="2019年秋期試験"
+                description="経済産業大臣が行う国家試験。ネットワークの技術的専門性を持つことを認定する試験で、高度情報処理技術者試験に含まれます。"
+                url="//www.ipa.go.jp/shiken/kubun/nw.html"
+              />
+              <CertificationItem
+                type="db"
+                name="データベーススペシャリスト"
+                when="2021年秋期試験"
+                description="経済産業大臣が行う国家試験。データベースの技術的専門性を持つことを認定する試験で、高度情報処理技術者試験に含まれます。"
+                url="//www.ipa.go.jp/shiken/kubun/db.html"
+              />
             </div>
           </div>
         </section>
