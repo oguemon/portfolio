@@ -1,0 +1,11 @@
+@use 'define';
+
+.section-title {
+    margin-top: 0;
+    margin-bottom: 40px;
+    color: var(--color-theme);
+    font-family: "Poppins";
+    font-size: 24px;
+    font-weight: 600;
+    text-align: center;
+}

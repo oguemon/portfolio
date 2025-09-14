@@ -1,11 +1,12 @@
 import React from "react";
-import { presentation_slides, sns_url } from "../components/constant";
+import { presentation_slides } from "../components/constant";
 import Header from "../components/header";
 import Footer from "../components/footer";
 import SEO from "../components/seo";
 import "../styles/presentation.scss";
 import { SlideItem } from "../components/slide-item";
 import { Heading } from "../components/heading";
+import { SectionTitle } from "../components/section-title";
 
 export const Head = () => (
   <SEO
@@ -37,7 +38,7 @@ export default function Presentation() {
         <div className="presentation">
           <section>
             <div className="wrapper">
-              <h2 className="section-name">一般的な話題</h2>
+              <SectionTitle title="一般的な話題" />
               <div className="slide-list">
                 {slides_general.map((slide, index) => (
                   <SlideItem
@@ -56,7 +57,7 @@ export default function Presentation() {
           </section>
           <section>
             <div className="wrapper">
-              <h2 className="section-name">サイボウズでの取り組み</h2>
+              <SectionTitle title="サイボウズでの取り組み" />
               <div className="slide-list">
                 {slides_cybozu.map((slide, index) => (
                   <SlideItem

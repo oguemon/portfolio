@@ -22,7 +22,7 @@ export const CareerItem: React.FC<Props> = ({
   link,
   isNow = false,
 }) => {
-  const [isOpen, setIsOpen] = useState(false);
+  const [isOpen, setIsOpen] = useState(isNow);
 
   return (
     <div className={`career-item ${isNow ? "now" : ""}`}>

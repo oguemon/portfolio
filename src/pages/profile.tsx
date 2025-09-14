@@ -14,6 +14,7 @@ import { SkillTag } from "../components/skill-tag";
 import { CertificationItem } from "../components/certification-item";
 import { AwardItem } from "../components/award-item";
 import { CareerItem } from "../components/career-item";
+import { SectionTitle } from "../components/section-title";
 
 export const Head = () => <SEO title="PROFILE" description="デザインから実装までを手がけるWeb開発者・小倉 且也の紹介です。" />
 
@@ -45,7 +46,7 @@ export default function Profile() {
         </section>
         <section>
           <div className="wrapper">
-            <h2 className="profile-section">SKILL</h2>
+            <SectionTitle title="SKILL" />
             <div className="skill-main-list">
               <SkillItem
                 title="UI/UXを前提としたデザイン"
@@ -72,7 +73,7 @@ export default function Profile() {
         </section>
         <section className="certifications">
           <div className="wrapper">
-            <h2 className="profile-section">CERTIFICATIONS</h2>
+            <SectionTitle title="CERTIFICATIONS" />
             <div className="certification-list">
               <CertificationItem
                 type="ap"
@@ -100,7 +101,7 @@ export default function Profile() {
         </section>
         <section>
           <div className="wrapper">
-            <h2 className="profile-section">AWARDS</h2>
+            <SectionTitle title="AWARDS" />
             <div className="award-list">
               <AwardItem
                 name="第6回学生スマートフォンアプリコンテスト 最優秀賞"
@@ -124,33 +125,8 @@ export default function Profile() {
         </section>
         <section>
           <div className="wrapper">
-            <h2 className="profile-section">CAREER</h2>
+            <SectionTitle title="CAREER" />
             <div className="career-list">
-              <CareerItem
-                type="school"
-                name="大阪大学"
-                position="基礎工学部情報科学科"
-                subPosition="計算機科学コース"
-                period="2014 - 2017"
-                description="ハードウェア・ソフトウェア双方の基礎設計を学び、最終的にCPUとコンパイラを実装しました。学業の傍で、大学祭中央実行委員会でDTP・WEB広報を担当。さらに3年次は委員長として大学祭の充実と知名度向上を図りました。3年次に大学院試験に合格したので、年度末をもって大学を退学。大学院に飛び進学しました。"
-              />
-              <CareerItem
-                type="school"
-                name="大阪大学"
-                position="大学院情報科学研究科"
-                subPosition="情報ネットワーク学専攻"
-                period="2017 - 2019"
-                description="家屋や森林など地上の物体を捉えた3次元データ（3次元点群）から目標物を抽出する手法を研究していました。研究データの取得を通じて培ったドローンの自動制御プログラムの実装ノウハウを活用して、高等専門学校生に対して画像認識に基づくドローン制御プログラムの指導なども行いました。"
-                link={{ label: "研究室の個人ページ", url: "https://www-higashi.ist.osaka-u.ac.jp/~k-ogura/" }}
-              />
-              <CareerItem
-                type="work"
-                name="三菱電機株式会社"
-                position="バックエンドエンジニア"
-                period="2019 - 2022"
-                description="新卒入社以来、数百万人規模の利用者を誇るWebサービスのバックエンド処理の設計実装、プロジェクト進行支援を担当していました。"
-                link={{ label: "事業部の紹介ページ", url: "https://www.mitsubishielectric.co.jp/saiyo/graduates/philosophy/place/it/" }}
-              />
               <CareerItem
                 type="work"
                 name="サイボウズ株式会社"
@@ -168,6 +144,31 @@ export default function Profile() {
                 description="業務委託メンバーとして、暗号通貨にまつわる各種レポートを配信する自社メディア「Ledifiリサーチ」をはじめとする各種サービスの設計開発を担当しています。"
                 link={{ label: "会社の公式ページ", url: "https://nxt-fintech.com/" }}
                 isNow
+              />
+              <CareerItem
+                type="work"
+                name="三菱電機株式会社"
+                position="バックエンドエンジニア"
+                period="2019 - 2022"
+                description="新卒入社以来、数百万人規模の利用者を誇るWebサービスのバックエンド処理の設計実装、プロジェクト進行支援を担当していました。"
+                link={{ label: "事業部の紹介ページ", url: "https://www.mitsubishielectric.co.jp/saiyo/graduates/philosophy/place/it/" }}
+              />
+              <CareerItem
+                type="school"
+                name="大阪大学"
+                position="大学院情報科学研究科"
+                subPosition="情報ネットワーク学専攻"
+                period="2017 - 2019"
+                description="家屋や森林など地上の物体を捉えた3次元データ（3次元点群）から目標物を抽出する手法を研究していました。研究データの取得を通じて培ったドローンの自動制御プログラムの実装ノウハウを活用して、高等専門学校生に対して画像認識に基づくドローン制御プログラムの指導なども行いました。"
+                link={{ label: "研究室の個人ページ", url: "https://www-higashi.ist.osaka-u.ac.jp/~k-ogura/" }}
+              />
+              <CareerItem
+                type="school"
+                name="大阪大学"
+                position="基礎工学部情報科学科"
+                subPosition="計算機科学コース"
+                period="2014 - 2017"
+                description="ハードウェア・ソフトウェア双方の基礎設計を学び、最終的にCPUとコンパイラを実装しました。学業の傍で、大学祭中央実行委員会でDTP・WEB広報を担当。さらに3年次は委員長として大学祭の充実と知名度向上を図りました。3年次に大学院試験に合格したので、年度末をもって大学を退学。大学院に飛び進学しました。"
               />
             </div>
           </div>

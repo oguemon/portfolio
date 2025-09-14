@@ -9,16 +9,6 @@
         }
     }
 
-    h2.section-name {
-        margin-top: 0;
-        margin-bottom: 40px;
-        color: var(--color-theme);
-        font-family: "Poppins";
-        font-size: 24px;
-        font-weight: 600;
-        text-align: center;
-    }
-
     .slide-list {
         display: grid;
         grid-template-columns: repeat(3, 1fr);
