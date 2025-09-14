@@ -1,5 +1,5 @@
 import React from "react";
-import { graphql, Link } from "gatsby";
+import { graphql } from "gatsby";
 import Header from "../components/header";
 import Footer from "../components/footer";
 import SEO from "../components/seo";
@@ -8,6 +8,9 @@ import hero from "../assets/hero.mp4";
 import { WorkItem } from "../components/work-item";
 import { SnsButtonList } from "../components/sns-button-list";
 import { Heading } from "../components/heading";
+import { SectionTitle } from "../components/section-title";
+import { SlideItem } from "../components/slide-item";
+import { LearnMore } from "../components/learn-more";
 
 export const Head = () => <SEO title="小倉 且也" description="デザインから実装までを手がけるWeb開発者・小倉 且也のポートフォリオサイトです。" />
 
@@ -33,10 +36,13 @@ export default function Top({ data }) {
             個人サイト「おぐえもん.com」にて記事執筆やWebサービス開発をしており、その中のコンテンツ「大学1年生もバッチリ分かる線形代数入門」は、460万以上のPVを誇り書籍化されました。
             個人開発メインですが、WEB開発・広報物作成（画像・動画・印刷物）のお仕事の募集もしてます！
           </div>
-          <Link to="/profile" className="learn-more">詳しいプロフィールを見る</Link>
+          <div className="learn-more-container">
+            <LearnMore path="/profile" label="詳しいプロフィールを見る" />
+          </div>
         </div>
       </div>
       <div className="wrapper">
+        <SectionTitle title="WORK" />
         <div className="work-list">
           {data.allContentfulPortfolio.edges.map(edge => (
             <WorkItem
@@ -52,13 +58,51 @@ export default function Top({ data }) {
           ))}
         </div>
       </div>
+      <div className="wrapper">
+        <SectionTitle title="PRESENTATION" />
+        <div className="work-list">
+          {data.allContentfulPresentation.edges.map(({node: slide}) => (
+            <SlideItem
+              key={slide.slug}
+              title={slide.title}
+              eventName={slide.eventName}
+              date={slide.date}
+              place={slide.place}
+              slideUrl={slide.slideUrl ?? ""}
+              eventUrl={slide.eventUrl ?? ""}
+              thumbnailData={slide.thumbnail.gatsbyImageData}
+            />
+          ))}
+        </div>
+        <div className="learn-more-container">
+          <LearnMore path="/presentation" label="他の登壇内容を見る" />
+        </div>
+      </div>
     </main>
     <Footer />
   </>
 }
 
 export const query = graphql`
-  query MyQuery {
+  query Index {
+    allContentfulPresentation(sort: { date: DESC }, limit: 6) {
+      edges {
+        node {
+          slug
+          category
+          title
+          eventName
+          date
+          place
+          slideUrl
+          eventUrl
+          thumbnail {
+            title
+            gatsbyImageData
+          }
+        }
+      }
+    }
     allContentfulPortfolio (
       sort: { year: DESC }
     ) {

@@ -1,5 +1,11 @@
 @use 'define';
 
+main {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
 .hero {
     min-width: calc(var(--min-width-pc) + 40px);
     height: 480px;
@@ -52,6 +58,13 @@
     gap: 20px 42px;
 
     @include define.mobile {
+        margin: 0 15px;
         grid-template-columns: repeat(1, 1fr);
     }
+}
+
+.learn-more-container {
+    margin-top: 40px;
+    display: flex;
+    justify-content: center;
 }

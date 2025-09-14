@@ -39,34 +39,6 @@ body {
             font-size: 14px;
         }
     }
-
-    a.learn-more {
-        width: 260px;
-        height: 40px;
-        margin: 40px auto;
-        color: var(--color-btn-text);
-        background-color: var(--color-btn-bg);
-        line-height: 40px;
-        text-align: center;
-        text-decoration: none;
-        border-radius: 20px;
-        display: block;
-        transition-property: background-color;
-        transition-duration: 200ms;
-
-        &:hover {
-            background-color: var(--color-btn-bg-hover);
-        }
-
-        &:after {
-            width: 7px;
-            height: 12px;
-            margin-left: 10px;
-            background-image: url(../assets/icon-next.svg);
-            content: '';
-            display: inline-block;
-        }
-    }
 }
 
 .page-title-container {
