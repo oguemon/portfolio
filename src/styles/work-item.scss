@@ -1,0 +1,51 @@
+@use 'define';
+
+.work-item {
+    text-decoration: none;
+    transition-property: opacity;
+    transition-duration: 200ms;
+
+    &:hover {
+        opacity: 0.4;
+    }
+
+    @include define.mobile {
+        margin: 0 15px;
+    }
+
+    .thumnail {
+        width: 100%;
+        margin-bottom: 15px;
+        display: block;
+
+        img {
+            border-radius: 5px;
+        }
+    }
+
+    h2.title {
+        margin: 0;
+        color: var(--color-text-base);
+        font-size: 16px;
+        font-weight: normal;
+        line-height: 20px;
+    }
+
+    p.description {
+        margin-top: 10px;
+        margin-bottom: 0;
+        color: var(--color-text-base);
+        font-size: 12px;
+        font-weight: normal;
+        line-height: 20px;
+    }
+
+    p.detail {
+        margin-top: 10px;
+        margin-bottom: 0;
+        color: var(--color-text-sub);
+        font-size: 12px;
+        font-weight: normal;
+        line-height: 20px;
+    }
+}

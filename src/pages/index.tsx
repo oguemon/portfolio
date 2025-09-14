@@ -1,32 +1,16 @@
 import React from "react";
 import { graphql, Link } from "gatsby";
-import { GatsbyImage } from 'gatsby-plugin-image'
 import { sns_url } from "../components/constant";
 import Header from "../components/header";
 import Footer from "../components/footer";
 import SEO from "../components/seo";
 import "../styles/top.scss";
 import hero from "../assets/hero.mp4";
+import { WorkItem } from "../components/work-item";
 
 export const Head = () => <SEO title="小倉 且也" description="デザインから実装までを手がけるWeb開発者・小倉 且也のポートフォリオサイトです。" />
 
 export default function Top({ data }) {
-
-  const list = data.allContentfulPortfolio.edges.map(edge => {
-    return <>
-      <Link to={`/work/${edge.node.slug}/`} className="work-box">
-        <GatsbyImage
-          image={edge.node.thumnail.gatsbyImageData}
-          alt={edge.node.thumnail.title}
-          className="thumnail"
-        />
-        <h2 className="title">{ edge.node.title }</h2>
-        <p className="description">{ edge.node.abstract }</p>
-        <p className="detail">{ edge.node.category.toUpperCase() }・{ edge.node.year }・{ edge.node.client }</p>
-      </Link>
-    </>
-  });
-
   return <>
     <Header />
     <div className="hero">
@@ -55,7 +39,20 @@ export default function Top({ data }) {
         </div>
       </div>
       <div className="wrapper">
-        <div className="work-list">{ list }</div>
+        <div className="work-list">
+          {data.allContentfulPortfolio.edges.map(edge => (
+            <WorkItem
+              key={edge.node.slug}
+              title={edge.node.title}
+              abstract={edge.node.abstract}
+              category={edge.node.category.toUpperCase()}
+              year={edge.node.year}
+              client={edge.node.client}
+              url={`/work/${edge.node.slug}/`}
+              thumbnailData={edge.node.thumnail.gatsbyImageData}
+            />
+          ))}
+        </div>
       </div>
     </main>
     <Footer />
