@@ -1,5 +1,4 @@
 import React from "react";
-import { presentation_slides } from "../components/constant";
 import Header from "../components/header";
 import Footer from "../components/footer";
 import SEO from "../components/seo";
@@ -7,6 +6,7 @@ import "../styles/presentation.scss";
 import { SlideItem } from "../components/slide-item";
 import { Heading } from "../components/heading";
 import { SectionTitle } from "../components/section-title";
+import { graphql, PageProps } from "gatsby";
 
 export const Head = () => (
   <SEO
@@ -15,23 +15,23 @@ export const Head = () => (
   />
 );
 
-export default function Presentation() {
-  const slides_general = presentation_slides.filter(
-    ({ category }) => category === "general"
-  );
-  const slides_cybozu = presentation_slides.filter(
-    ({ category }) => category === "cybozu"
-  );
+export default function Presentation({
+  data,
+}: PageProps<Queries.PresentationQuery>) {
+  const slides = data.allContentfulPresentation.edges;
+  const slides_general = slides
+    .filter(({ node }) => node.category === "general")
+    .map(({ node }) => node);
+  const slides_cybozu = slides
+    .filter(({ node }) => node.category === "cybozu")
+    .map(({ node }) => node);
 
   return (
     <>
       <Header />
       <div className="wrapper">
         <div className="page-title-container">
-          <Heading
-            title="PRESENTATION"
-            subTitle="過去の登壇の記録"
-          />
+          <Heading title="PRESENTATION" subTitle="過去の登壇の記録" />
         </div>
       </div>
       <main>
@@ -47,9 +47,9 @@ export default function Presentation() {
                     eventName={slide.eventName}
                     date={slide.date}
                     place={slide.place}
-                    slideUrl={slide.slideUrl}
-                    eventUrl={slide.eventUrl}
-                    thumbnailUrl={slide.thumbnailUrl}
+                    slideUrl={slide.slideUrl ?? ""}
+                    eventUrl={slide.eventUrl ?? ""}
+                    thumbnailData={slide.thumbnail.gatsbyImageData}
                   />
                 ))}
               </div>
@@ -66,9 +66,9 @@ export default function Presentation() {
                     eventName={slide.eventName}
                     date={slide.date}
                     place={slide.place}
-                    slideUrl={slide.slideUrl}
-                    eventUrl={slide.eventUrl}
-                    thumbnailUrl={slide.thumbnailUrl}
+                    slideUrl={slide.slideUrl ?? ""}
+                    eventUrl={slide.eventUrl ?? ""}
+                    thumbnailData={slide.thumbnail.gatsbyImageData}
                   />
                 ))}
               </div>
@@ -80,3 +80,26 @@ export default function Presentation() {
     </>
   );
 }
+
+export const query = graphql`
+  query Presentation {
+    allContentfulPresentation(sort: { date: DESC }) {
+      edges {
+        node {
+          slug
+          category
+          title
+          eventName
+          date
+          place
+          slideUrl
+          eventUrl
+          thumbnail {
+            title
+            gatsbyImageData
+          }
+        }
+      }
+    }
+  }
+`;

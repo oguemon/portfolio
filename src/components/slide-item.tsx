@@ -1,14 +1,16 @@
 import React from "react";
 import "../styles/slide-item.scss";
+import { GatsbyImage, IGatsbyImageData } from "gatsby-plugin-image";
 
 type Props = {
   title: string;
+  /** ISO形式の日付 */
   date: string;
   eventName: string;
   place: string;
   eventUrl: string;
   slideUrl: string;
-  thumbnailUrl: string;
+  thumbnailData: IGatsbyImageData;
 };
 
 export const SlideItem: React.FC<Props> = ({
@@ -18,15 +20,15 @@ export const SlideItem: React.FC<Props> = ({
   place,
   eventUrl,
   slideUrl,
-  thumbnailUrl,
+  thumbnailData,
 }) => {
   return (
     <article className="slide-item">
-      <img className="thumbnail" src={thumbnailUrl} alt={title} />
+      <GatsbyImage className="thumbnail" image={thumbnailData} alt={title} />
       <div className="info">
         <div className="event-name">{eventName}</div>
         <div className="event-date">
-          {date}・{place}
+          {formatDate(date)}・{place}
         </div>
         <div className="link-list">
           {slideUrl !== "" && (
@@ -63,4 +65,9 @@ export const SlideItem: React.FC<Props> = ({
       </div>
     </article>
   );
+};
+
+const formatDate = (isoDate: string) => {
+  const date = new Date(isoDate);
+  return `${date.getFullYear()}年${date.getMonth() + 1}月${date.getDate()}日`;
 };

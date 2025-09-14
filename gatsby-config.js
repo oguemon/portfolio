@@ -1,6 +1,7 @@
 require("dotenv").config();
 
 module.exports = {
+  graphqlTypegen: true,
   plugins: [
     `gatsby-plugin-image`,
     {
