@@ -1,0 +1,27 @@
+@use 'define';
+
+.heading {
+    font-family: 'Poppins';
+    line-height: 1;
+    text-align: center;
+
+    .title-main {
+        margin: 0;
+        font-size: 42px;
+        font-weight: 600;
+
+        @include define.mobile {
+            font-size: 32px;
+        }
+    }
+
+    .title-sub {
+        margin-top: 10px;
+        font-size: 16px;
+        font-weight: 300;
+
+        @include define.mobile {
+            font-size: 14px;
+        }
+    }
+}

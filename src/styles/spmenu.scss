@@ -94,38 +94,4 @@
             }
         }
     }
-
-    .sns-btn-list {
-        width: 165px;
-        display: flex;
-        justify-content: space-between;
-
-        a.sns-btn {
-            width: 30px;
-            height: 30px;
-            transition-property: opacity;
-            transition-duration: 200ms;
-            display: block;
-
-            &.x {
-                background-image: url(../assets/media/x.svg);
-            }
-
-            &.instagram {
-                background-image: url(../assets/media/instagram.svg);
-            }
-
-            &.github {
-                background-image: url(../assets/media/github.svg);
-            }
-
-            &.zenn {
-                background-image: url(../assets/media/zenn.svg);
-            }
-
-            &:hover {
-                opacity: 0.4;
-            }
-        }
-    }
 }

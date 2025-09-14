@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Link } from "gatsby";
-import { sns_url, techIcon } from "../components/constant";
+import { techIcon } from "../components/constant";
 import Header from "../components/header";
 import Footer from "../components/footer";
 import SEO from "../components/seo";
@@ -8,6 +8,8 @@ import "../styles/profile.scss";
 import skill_1 from "../assets/skill-1.svg";
 import skill_2 from "../assets/skill-2.svg";
 import skill_3 from "../assets/skill-3.svg";
+import { SnsButtonList } from "../components/sns-button-list";
+import { Heading } from "../components/heading";
 
 export const Head = () => <SEO title="PROFILE" description="デザインから実装までを手がけるWeb開発者・小倉 且也の紹介です。" />
 
@@ -73,15 +75,12 @@ export default function Profile() {
   return <>
     <Header />
     <div className="wrapper">
-      <div className="title-container">
-        <h1 className="title-main">OGURA KATSUYA</h1>
-        <div className="title-sub">Web Designer / Engineer</div>
-        <div className="sns-btn-list">
-          <a href={sns_url.x}         target="_blank" rel="noreferrer" className="sns-btn x"></a>
-          <a href={sns_url.instagram} target="_blank" rel="noreferrer" className="sns-btn instagram"></a>
-          <a href={sns_url.github}    target="_blank" rel="noreferrer" className="sns-btn github"></a>
-          <a href={sns_url.zenn}      target="_blank" rel="noreferrer" className="sns-btn zenn"></a>
-        </div>
+      <div className="page-title-container">
+        <Heading
+          title="OGURA KATSUYA"
+          subTitle="Web Designer / Engineer"
+        />
+        <SnsButtonList />
       </div>
     </div>
     <main>

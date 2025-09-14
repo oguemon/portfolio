@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import { Link } from "gatsby";
-import { sns_url } from "./constant";
 import "../styles/header.scss";
 import "../styles/spmenu.scss";
+import { SnsButtonList } from "./sns-button-list";
 
 export default function Header() {
 
@@ -37,11 +37,8 @@ export default function Header() {
             <Link to="/presentation" className="menu-item">PRESENTATION</Link>
             <Link to="//forms.gle/SDnHnzGLH5Y4ynzz6" target="_blank" className="menu-item">CONTACT</Link>
           </div>
-          <div className="sns-btn-list">
-            <a href={sns_url.x}         target="_blank" rel="noreferrer" className="sns-btn x"></a>
-            <a href={sns_url.instagram} target="_blank" rel="noreferrer" className="sns-btn instagram"></a>
-            <a href={sns_url.github}    target="_blank" rel="noreferrer" className="sns-btn github"></a>
-            <a href={sns_url.zenn}      target="_blank" rel="noreferrer" className="sns-btn zenn"></a>
+          <div className="sns-btn-list-container">
+            <SnsButtonList />
           </div>
         </div>
         <div className="sp-menu-btn" onClick={openSpMenu}></div>
@@ -73,12 +70,7 @@ export default function Header() {
             <span className="ja">お問い合わせ</span>
           </Link>
         </div>
-        <div className="sns-btn-list">
-          <a href={sns_url.x}         target="_blank" rel="noreferrer" className="sns-btn x"></a>
-          <a href={sns_url.instagram} target="_blank" rel="noreferrer" className="sns-btn instagram"></a>
-          <a href={sns_url.github}    target="_blank" rel="noreferrer" className="sns-btn github"></a>
-          <a href={sns_url.zenn}      target="_blank" rel="noreferrer" className="sns-btn zenn"></a>
-        </div>
+        <SnsButtonList />
       </div>
     </div>
   </>

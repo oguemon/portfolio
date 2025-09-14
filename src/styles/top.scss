@@ -36,14 +36,12 @@
         z-index: -1;
     }
 
-    .title-container {
+    // 基本的な実装はcommon.scssにある
+    .page-title-container {
+        padding-top: 0;
         color: var(--color-hero-text);
         text-shadow: 0 0 10px var(--color-hero-shadow);
         z-index: 1;
-
-        .title-main {
-            padding-top: 0;
-        }
     }
 }
 

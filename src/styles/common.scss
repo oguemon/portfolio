@@ -25,68 +25,6 @@ body {
     }
 }
 
-.title-container {
-    font-family: 'Poppins';
-    line-height: 1;
-    text-align: center;
-
-    .title-main {
-        margin: 0;
-        padding-top: 110px;
-        font-size: 42px;
-        font-weight: 600;
-
-        @include define.mobile {
-            font-size: 32px;
-        }
-    }
-
-    .title-sub {
-        margin-top: 10px;
-        font-size: 16px;
-        font-weight: 300;
-
-        @include define.mobile {
-            font-size: 14px;
-        }
-    }
-
-    .sns-btn-list {
-        width: 165px;
-        margin: 20px auto 0;
-        display: flex;
-        justify-content: space-between;
-
-        a.sns-btn {
-            width: 30px;
-            height: 30px;
-            transition-property: opacity;
-            transition-duration: 200ms;
-            display: block;
-
-            &.x {
-                background-image: url(../assets/media/x.svg);
-            }
-
-            &.instagram {
-                background-image: url(../assets/media/instagram.svg);
-            }
-
-            &.github {
-                background-image: url(../assets/media/github.svg);
-            }
-
-            &.zenn {
-                background-image: url(../assets/media/zenn.svg);
-            }
-
-            &:hover {
-                opacity: 0.4;
-            }
-        }
-    }
-}
-
 .intro {
     padding-top: 40px;
 
@@ -129,4 +67,12 @@ body {
             display: inline-block;
         }
     }
+}
+
+.page-title-container {
+    padding-top: 110px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
 }

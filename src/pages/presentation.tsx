@@ -5,6 +5,7 @@ import Footer from "../components/footer";
 import SEO from "../components/seo";
 import "../styles/presentation.scss";
 import { SlideItem } from "../components/slide-item";
+import { Heading } from "../components/heading";
 
 export const Head = () => (
   <SEO
@@ -25,9 +26,11 @@ export default function Presentation() {
     <>
       <Header />
       <div className="wrapper">
-        <div className="title-container">
-          <h1 className="title-main">PRESENTATION</h1>
-          <div className="title-sub">過去の登壇の記録</div>
+        <div className="page-title-container">
+          <Heading
+            title="PRESENTATION"
+            subTitle="過去の登壇の記録"
+          />
         </div>
       </div>
       <main>
