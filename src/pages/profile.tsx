@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import { Link } from "gatsby";
 import { skill_names, techIcon } from "../components/constant";
 import Header from "../components/header";
 import Footer from "../components/footer";
@@ -13,6 +12,7 @@ import { Heading } from "../components/heading";
 import { SkillItem } from "../components/skill-item";
 import { SkillTag } from "../components/skill-tag";
 import { CertificationItem } from "../components/certification-item";
+import { AwardItem } from "../components/award-item";
 
 export const Head = () => <SEO title="PROFILE" description="デザインから実装までを手がけるWeb開発者・小倉 且也の紹介です。" />
 
@@ -129,15 +129,23 @@ export default function Profile() {
           <div className="wrapper">
             <h2 className="profile-section">AWARDS</h2>
             <div className="award-list">
-              <div className="award-item">
-                <div className="name">第6回学生スマートフォンアプリコンテスト 最優秀賞</div>
-                <div className="when">2018年8月</div>
-                <div className="description">地図アプリ「MYLESTONE」。方向音痴な人でも目的地に到達できることを目指して作りました。今までにない直感的な指標とインターフェースが特長です。</div>
-                <div className="links">
-                  <Link to="/work/mylestone/" target="_blank">MYLESTONEの紹介ページ</Link>
-                  <Link to="//contest2018.sig-cds.net/" target="_blank">第6回学生スマートフォンアプリコンテスト公式ページ</Link>
-                </div>
-              </div>
+              <AwardItem
+                name="第6回学生スマートフォンアプリコンテスト 最優秀賞"
+                when="2018年8月"
+                description="地図アプリ「MYLESTONE」。方向音痴な人でも目的地に到達できることを目指して作りました。今までにない直感的な指標とインターフェースが特長です。"
+                links={[
+                  {
+                    label: "MYLESTONEの紹介ページ",
+                    url: "/work/mylestone/",
+                    openTab: false
+                  },
+                  {
+                    label: "第6回学生スマートフォンアプリコンテスト公式ページ",
+                    url: "https://web.archive.org/web/20250613063838/http://contest2018.sig-cds.net/",
+                    openTab: true
+                  }
+                ]}
+              />
             </div>
           </div>
         </section>

@@ -1,0 +1,77 @@
+@use 'define';
+
+.award-item {
+    padding: 20px;
+    position: relative;
+    border: 1px solid var(--color-yellow-800);
+    background-color: var(--color-yellow-100);
+    border-radius: 5px;
+
+    &:before {
+        width: 36px;
+        height: 48px;
+        content: '';
+        background-image: url(../assets/icon-medal.svg);
+        position: absolute;
+        display: block;
+    }
+
+    .name {
+        padding-top: 5px;
+        font-size: 20px;
+        padding-left: 50px;
+        font-weight: bold;
+        line-height: 1;
+
+        @include define.mobile {
+            line-height: 1.2;
+        }
+    }
+
+    .when {
+        margin-top: 10px;
+        padding-left: 50px;
+        color: var(--color-text-sub);
+        font-size: 14px;
+        line-height: 1;
+    }
+
+    .description {
+        margin-top: 15px;
+        padding-left: 50px;
+        color: var(--color-text-sub);
+        font-size: 14px;
+        line-height: 24px;
+        text-align: justify;
+    }
+
+    .links {
+        margin-top: 15px;
+        padding-left: 50px;
+
+        a {
+            margin-top: 5px;
+            color: var(--color-theme);
+            font-size: 14px;
+            text-decoration: none;
+            display: inline-block;
+
+            &:first-child {
+                margin-top: 0;
+            }
+
+            &:before {
+                width: 14px;
+                height: 14px;
+                margin-right: 5px;
+                content: "";
+                display: inline-block;
+                background-image: url(../assets/icon-link.svg);
+            }
+
+            &:hover {
+                text-decoration: underline;
+            }
+        }
+    }
+}
