@@ -39,8 +39,31 @@ export const sns_url = {
     zenn:      "https://zenn.dev/oguemon",
 };
 
+// スキル一覧
+export const skill_names = [
+  "Android",
+  "CSS",
+  "Gatsby",
+  "HTML",
+  "Illustrator",
+  "InDesign",
+  "Java",
+  "JavaScript",
+  "LaTeX",
+  "Premiere Pro",
+  "PhotoShop",
+  "PHP",
+  "React",
+  "SCSS",
+  "TypeScript",
+  "WordPress",
+  "XD",
+] as const;
+
+type SkillName = typeof skill_names[number];
+
 // 技術のアイコン
-export const techIcon = tech_name => {
+export const techIcon = (tech_name: SkillName) => {
     switch (tech_name) {
         case "Android": return tech_android;
         case "CSS": return tech_css;

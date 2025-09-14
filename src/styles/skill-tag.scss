@@ -1,0 +1,25 @@
+@use 'define';
+
+.skill-tag {
+    height: 32px;
+    padding: 0 4px;
+    background-color: var(--color-skill-item-bg);
+    border-radius: 16px;
+    display: flex;
+    align-items: center;
+
+    .icon {
+        width: 24px;
+        height: 24px;
+        margin-right: 5px;
+        background-color: var(--color-thum-bg);
+        border-radius: 12px;
+        display: block;
+    }
+
+    .name {
+        padding-right: 8px;
+        font-size: 14px;
+        line-height: 32px;
+    }
+}

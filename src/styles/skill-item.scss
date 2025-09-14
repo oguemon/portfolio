@@ -1,0 +1,40 @@
+@use 'define';
+
+.skill-item {
+    display: flex;
+    flex-direction: column;
+
+    @include define.mobile {
+        width: auto;
+        flex-direction: row;
+        gap: 15px;
+    }
+
+    .thum {
+        width: 200px;
+        height: 200px;
+        margin: 0 auto 20px;
+
+        @include define.mobile {
+            width: 100px;
+            height: 100px;
+            margin: 0;
+        }
+    }
+
+    .skill-info {
+        flex: 1;
+
+        .title {
+            font-weight: bold;
+        }
+
+        .description {
+            margin-top: 10px;
+            color: var(--color-text-sub);
+            font-size: 14px;
+            line-height: 24px;
+            text-align: justify;
+        }
+    }
+}

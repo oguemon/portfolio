@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Link } from "gatsby";
-import { techIcon } from "../components/constant";
+import { skill_names, techIcon } from "../components/constant";
 import Header from "../components/header";
 import Footer from "../components/footer";
 import SEO from "../components/seo";
@@ -10,40 +10,12 @@ import skill_2 from "../assets/skill-2.svg";
 import skill_3 from "../assets/skill-3.svg";
 import { SnsButtonList } from "../components/sns-button-list";
 import { Heading } from "../components/heading";
+import { SkillItem } from "../components/skill-item";
+import { SkillTag } from "../components/skill-tag";
 
 export const Head = () => <SEO title="PROFILE" description="デザインから実装までを手がけるWeb開発者・小倉 且也の紹介です。" />
 
 export default function Profile() {
-
-  const skill_names = [
-    "Android",
-    "CSS",
-    "Gatsby",
-    "HTML",
-    "Illustrator",
-    "InDesign",
-    "Java",
-    "JavaScript",
-    "LaTeX",
-    "Premiere Pro",
-    "PhotoShop",
-    "PHP",
-    "React",
-    "SCSS",
-    "TypeScript",
-    "WordPress",
-    "XD",
-  ];
-
-  const skills = skill_names.map(skill_name => {
-    return <>
-      <div className="skill-item">
-        <div className="thum"><img src={ techIcon(skill_name) } alt={ skill_name } /></div>
-        <div className="name">{ skill_name }</div>
-      </div>
-    </>
-  });
-
   const [setActiveSchoolB, setActiveStateSchoolB] = useState(false);
   const [setActiveSchoolM, setActiveStateSchoolM] = useState(false);
   const [setActiveWork1, setActiveStateWork1] = useState(false);
@@ -101,39 +73,27 @@ export default function Profile() {
           <div className="wrapper">
             <h2 className="profile-section">SKILL</h2>
             <div className="skill-main-list">
-              <div className="skill-main-item">
-                <img className="thum" src={ skill_1 } alt="UI/UXを前提としたデザイン" />
-                <div className="skill-info">
-                  <div className="title">UI/UXを前提としたデザイン</div>
-                  <div className="description">
-                    デザインでは、使い勝手の良さや視認性の高さを常に重視しており、心理学的な知見に基づいてこれを追求します。
-                    利用者にとって使いやすいものを作ることに強みを持ちます。
-                  </div>
-                </div>
-              </div>
-              <div className="skill-main-item">
-                <img className="thum" src={ skill_2 } alt="SEO対策やSNSを考えた実装" />
-                <div className="skill-info">
-                  <div className="title">SEO対策やSNSを考えた実装</div>
-                  <div className="description">
-                    Webサイトは訪問されることに意味があります。
-                    検索エンジンに正しく情報を伝え、SNS共有時のリンク表示を最適化する。
-                    アクセス向上に寄与するこれらの実装ができます。
-                  </div>
-                </div>
-              </div>
-              <div className="skill-main-item">
-                <img className="thum" src={ skill_3 } alt="デザインもフロント/バックエンドも" />
-                <div className="skill-info">
-                  <div className="title">デザインもフロント/バックエンドも</div>
-                  <div className="description">
-                    デザインは、Webサイトのみならず、ロゴや印刷物、広報用画像も手掛けます。
-                    さらに、Webサイトの設計実装は、ブラウザ側はもちろん、APIやDBが絡むサーバ側もカバーします。
-                  </div>
-                </div>
-              </div>
+              <SkillItem
+                title="UI/UXを前提としたデザイン"
+                description="デザインでは、使い勝手の良さや視認性の高さを常に重視しており、心理学的な知見に基づいてこれを追求します。利用者にとって使いやすいものを作ることに強みを持ちます。"
+                thumbnailUrl={skill_1}
+              />
+              <SkillItem
+                title="SEO対策やSNSを考えた実装"
+                description="Webサイトは訪問されることに意味があります。検索エンジンに正しく情報を伝え、SNS共有時のリンク表示を最適化する。アクセス向上に寄与するこれらの実装ができます。"
+                thumbnailUrl={skill_2}
+              />
+              <SkillItem
+                title="デザインもフロント/バックエンドも"
+                description="デザインは、Webサイトのみならず、ロゴや印刷物、広報用画像も手掛けます。さらに、Webサイトの設計実装は、ブラウザ側はもちろん、APIやDBが絡むサーバ側もカバーします。"
+                thumbnailUrl={skill_3}
+              />
             </div>
-            <div className="skill-list">{ skills }</div>
+            <div className="skill-list">
+              {skill_names.map(skill_name => (
+                <SkillTag key={skill_name} label={ skill_name } iconUrl={ techIcon(skill_name) } />
+              ))}
+            </div>
           </div>
         </section>
         <section className="certifications">
