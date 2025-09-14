@@ -18,7 +18,7 @@ export default function WorkDetail({ pageContext }) {
   const description = pageContext.post.description.description;
   const topimg = pageContext.post.topimg;
 
-  const tech_names = tech.split(",");
+  const tech_names = !!tech ? tech.split(",") : [];
   const tech_list = tech_names.map(tech_name => {
     return <>
       <div className="tech-item">
